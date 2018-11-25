@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "ofxKinectForWindows2.h"
-//#include "ofxBox2d.h"
+#include "ofxBox2d.h"
 
 class ofApp : public ofBaseApp{
 
@@ -27,8 +27,8 @@ class ofApp : public ofBaseApp{
 		
 		ofxKFW2::Device kinect;
 
-		//ofxPanel gui;
-		//ofxLabel fps;
+		ofxPanel gui;
+		ofxLabel fps;
 
 		float dayProgressionSpeed;
 };
