@@ -8,8 +8,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ofxKinectForWindows2Lib", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "barim", "barim.vcxproj", "{F1B43872-71C1-4DF1-8508-2719386D7018}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chuck", "lib\chuck\src\visual-studio\chuck.vcxproj", "{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -42,14 +40,6 @@ Global
 		{F1B43872-71C1-4DF1-8508-2719386D7018}.Release|Win32.Build.0 = Release|Win32
 		{F1B43872-71C1-4DF1-8508-2719386D7018}.Release|x64.ActiveCfg = Release|x64
 		{F1B43872-71C1-4DF1-8508-2719386D7018}.Release|x64.Build.0 = Release|x64
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Debug|Win32.ActiveCfg = Debug|Win32
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Debug|Win32.Build.0 = Debug|Win32
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Debug|x64.ActiveCfg = Debug|x64
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Debug|x64.Build.0 = Debug|x64
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Release|Win32.ActiveCfg = Release|Win32
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Release|Win32.Build.0 = Release|Win32
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Release|x64.ActiveCfg = Release|x64
-		{C83D6D51-D477-4BAB-B2C2-F0698B9D3FB1}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

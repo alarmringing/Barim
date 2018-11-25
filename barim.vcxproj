@@ -27,23 +27,23 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
@@ -52,21 +52,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
     <Import Project="..\..\..\addons\ofxKinectForWindows2\ofxKinectForWindows2.props" />
+    <Import Project="lib\chuck\ofxChuck.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
     <Import Project="..\..\..\addons\ofxKinectForWindows2\ofxKinectForWindows2.props" />
+    <Import Project="lib\chuck\ofxChuck.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
     <Import Project="..\..\..\addons\ofxKinectForWindows2\ofxKinectForWindows2.props" />
+    <Import Project="lib\chuck\ofxChuck.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
     <Import Project="..\..\..\addons\ofxKinectForWindows2\ofxKinectForWindows2.props" />
+    <Import Project="lib\chuck\ofxChuck.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -124,7 +128,7 @@ src;
 ..\..\..\addons\ofxFlowTools\src\tools;
 ..\..\..\addons\ofxFlowTools\src\visualisation;
 ..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -141,7 +145,7 @@ src;
       <PreprocessorDefinitions>__WINDOWS_MODERN__;__PLATFORM_WIN32__;__WINDOWS_DS__;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -182,7 +186,7 @@ src;
 ..\..\..\addons\ofxFlowTools\src\tools;
 ..\..\..\addons\ofxFlowTools\src\visualisation;
 ..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -226,7 +230,7 @@ src;
 ..\..\..\addons\ofxFlowTools\src\tools;
 ..\..\..\addons\ofxFlowTools\src\visualisation;
 ..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -240,6 +244,79 @@ src;
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="lib\chuck\core\chuck.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_absyn.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_carrier.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_compile.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_dl.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_emit.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_errmsg.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_frame.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_instr.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_io.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_lang.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_oo.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_otf.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_parse.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_scan.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_shell.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_stats.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_symbol.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_table.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_type.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_ugen.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_utils.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_vm.cpp" />
+    <ClCompile Include="lib\chuck\core\chuck_win32.c" />
+    <ClCompile Include="lib\chuck\core\hidio_sdl.cpp" />
+    <ClCompile Include="lib\chuck\core\lo\address.c" />
+    <ClCompile Include="lib\chuck\core\lo\blob.c" />
+    <ClCompile Include="lib\chuck\core\lo\bundle.c" />
+    <ClCompile Include="lib\chuck\core\lo\message.c" />
+    <ClCompile Include="lib\chuck\core\lo\method.c" />
+    <ClCompile Include="lib\chuck\core\lo\pattern_match.c" />
+    <ClCompile Include="lib\chuck\core\lo\send.c" />
+    <ClCompile Include="lib\chuck\core\lo\server.c" />
+    <ClCompile Include="lib\chuck\core\lo\timetag.c" />
+    <ClCompile Include="lib\chuck\core\midiio_rtmidi.cpp" />
+    <ClCompile Include="lib\chuck\core\regex\regcomp.c" />
+    <ClCompile Include="lib\chuck\core\regex\regerror.c" />
+    <ClCompile Include="lib\chuck\core\regex\regexec.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-ast.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-compile.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-filter.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-match-approx.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-match-backtrack.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-match-parallel.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-mem.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-parse.c" />
+    <ClCompile Include="lib\chuck\core\regex\tre-stack.c" />
+    <ClCompile Include="lib\chuck\core\regex\xmalloc.c" />
+    <ClCompile Include="lib\chuck\core\rtmidi.cpp" />
+    <ClCompile Include="lib\chuck\core\uana_extract.cpp" />
+    <ClCompile Include="lib\chuck\core\uana_xform.cpp" />
+    <ClCompile Include="lib\chuck\core\ugen_filter.cpp" />
+    <ClCompile Include="lib\chuck\core\ugen_osc.cpp" />
+    <ClCompile Include="lib\chuck\core\ugen_stk.cpp" />
+    <ClCompile Include="lib\chuck\core\ugen_xxx.cpp" />
+    <ClCompile Include="lib\chuck\core\ulib_machine.cpp" />
+    <ClCompile Include="lib\chuck\core\ulib_math.cpp" />
+    <ClCompile Include="lib\chuck\core\ulib_opsc.cpp" />
+    <ClCompile Include="lib\chuck\core\ulib_regex.cpp" />
+    <ClCompile Include="lib\chuck\core\ulib_std.cpp" />
+    <ClCompile Include="lib\chuck\core\util_buffers.cpp" />
+    <ClCompile Include="lib\chuck\core\util_console.cpp" />
+    <ClCompile Include="lib\chuck\core\util_hid.cpp" />
+    <ClCompile Include="lib\chuck\core\util_math.c" />
+    <ClCompile Include="lib\chuck\core\util_network.c" />
+    <ClCompile Include="lib\chuck\core\util_opsc.cpp" />
+    <ClCompile Include="lib\chuck\core\util_raw.c" />
+    <ClCompile Include="lib\chuck\core\util_serial.cpp" />
+    <ClCompile Include="lib\chuck\core\util_sndfile.c" />
+    <ClCompile Include="lib\chuck\core\util_string.cpp" />
+    <ClCompile Include="lib\chuck\core\util_thread.cpp" />
+    <ClCompile Include="lib\chuck\core\util_xforms.c" />
+    <ClCompile Include="lib\chuck\host\RtAudio\RtAudio.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.cpp" />
@@ -315,6 +392,71 @@ src;
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="lib\chuck\core\chuck.h" />
+    <ClInclude Include="lib\chuck\core\chuck_absyn.h" />
+    <ClInclude Include="lib\chuck\core\chuck_carrier.h" />
+    <ClInclude Include="lib\chuck\core\chuck_compile.h" />
+    <ClInclude Include="lib\chuck\core\chuck_def.h" />
+    <ClInclude Include="lib\chuck\core\chuck_dl.h" />
+    <ClInclude Include="lib\chuck\core\chuck_emit.h" />
+    <ClInclude Include="lib\chuck\core\chuck_errmsg.h" />
+    <ClInclude Include="lib\chuck\core\chuck_frame.h" />
+    <ClInclude Include="lib\chuck\core\chuck_instr.h" />
+    <ClInclude Include="lib\chuck\core\chuck_io.h" />
+    <ClInclude Include="lib\chuck\core\chuck_lang.h" />
+    <ClInclude Include="lib\chuck\core\chuck_oo.h" />
+    <ClInclude Include="lib\chuck\core\chuck_otf.h" />
+    <ClInclude Include="lib\chuck\core\chuck_parse.h" />
+    <ClInclude Include="lib\chuck\core\chuck_scan.h" />
+    <ClInclude Include="lib\chuck\core\chuck_shell.h" />
+    <ClInclude Include="lib\chuck\core\chuck_stats.h" />
+    <ClInclude Include="lib\chuck\core\chuck_symbol.h" />
+    <ClInclude Include="lib\chuck\core\chuck_table.h" />
+    <ClInclude Include="lib\chuck\core\chuck_type.h" />
+    <ClInclude Include="lib\chuck\core\chuck_ugen.h" />
+    <ClInclude Include="lib\chuck\core\chuck_utils.h" />
+    <ClInclude Include="lib\chuck\core\chuck_vm.h" />
+    <ClInclude Include="lib\chuck\core\chuck_win32.h" />
+    <ClInclude Include="lib\chuck\core\dirent_win32.h" />
+    <ClInclude Include="lib\chuck\core\hidio_sdl.h" />
+    <ClInclude Include="lib\chuck\core\lo\config.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_endian.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_errors.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_internal.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_lowlevel.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_macros.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_osc_types.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_throw.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_types.h" />
+    <ClInclude Include="lib\chuck\core\lo\lo_types_internal.h" />
+    <ClInclude Include="lib\chuck\core\midiio_rtmidi.h" />
+    <ClInclude Include="lib\chuck\core\rtmidi.h" />
+    <ClInclude Include="lib\chuck\core\uana_extract.h" />
+    <ClInclude Include="lib\chuck\core\uana_xform.h" />
+    <ClInclude Include="lib\chuck\core\ugen_filter.h" />
+    <ClInclude Include="lib\chuck\core\ugen_osc.h" />
+    <ClInclude Include="lib\chuck\core\ugen_stk.h" />
+    <ClInclude Include="lib\chuck\core\ugen_xxx.h" />
+    <ClInclude Include="lib\chuck\core\ulib_machine.h" />
+    <ClInclude Include="lib\chuck\core\ulib_math.h" />
+    <ClInclude Include="lib\chuck\core\ulib_opsc.h" />
+    <ClInclude Include="lib\chuck\core\ulib_regex.h" />
+    <ClInclude Include="lib\chuck\core\ulib_std.h" />
+    <ClInclude Include="lib\chuck\core\util_buffers.h" />
+    <ClInclude Include="lib\chuck\core\util_console.h" />
+    <ClInclude Include="lib\chuck\core\util_hid.h" />
+    <ClInclude Include="lib\chuck\core\util_math.h" />
+    <ClInclude Include="lib\chuck\core\util_network.h" />
+    <ClInclude Include="lib\chuck\core\util_opsc.h" />
+    <ClInclude Include="lib\chuck\core\util_raw.h" />
+    <ClInclude Include="lib\chuck\core\util_serial.h" />
+    <ClInclude Include="lib\chuck\core\util_sndfile.h" />
+    <ClInclude Include="lib\chuck\core\util_string.h" />
+    <ClInclude Include="lib\chuck\core\util_thread.h" />
+    <ClInclude Include="lib\chuck\core\util_xforms.h" />
+    <ClInclude Include="lib\chuck\host\RtAudio\RtAudio.h" />
+    <ClInclude Include="lib\chuck\host\RtAudio\RtError.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.h" />
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dBaseShape.h" />
@@ -457,9 +599,6 @@ src;
     </ProjectReference>
     <ProjectReference Include="..\..\..\addons\ofxKinectForWindows2\ofxKinectForWindows2Lib\ofxKinectForWindows2Lib.vcxproj">
       <Project>{f6008d6a-6d39-4b68-840e-e7ac8ed855da}</Project>
-    </ProjectReference>
-    <ProjectReference Include="lib\chuck\src\visual-studio\chuck.vcxproj">
-      <Project>{c83d6d51-d477-4bab-b2c2-f0698b9d3fb1}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
