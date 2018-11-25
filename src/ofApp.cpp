@@ -7,8 +7,8 @@ void ofApp::setup(){
 	kinect.initBodySource();
 	kinect.initBodyIndexSource();
 
-	gui.setup();
-	gui.add(fps.setup("fps", ofToString(ofGetFrameRate())));
+	//gui.setup();
+	//gui.add(fps.setup("fps", ofToString(ofGetFrameRate())));
 }
 
 void ofApp::updateKinectData() {
@@ -45,7 +45,7 @@ void ofApp::update() {
 void ofApp::draw(){
 	kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
-	gui.draw();
+	//gui.draw();
 }
 
 //--------------------------------------------------------------
