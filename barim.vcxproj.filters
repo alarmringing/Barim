@@ -1,104 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="addons">
-      <UniqueIdentifier>{7927a729-77f4-414b-8a9e-953fba2e9043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d">
-      <UniqueIdentifier>{9f9c317f-bb49-4438-b8cd-e4a8004439ca}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\src">
-      <UniqueIdentifier>{8f71df51-bb75-4480-b90d-b0d82f901ce5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs">
-      <UniqueIdentifier>{a082bc7e-1793-4dd3-96e1-a70ea5292e74}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D">
-      <UniqueIdentifier>{6f668b24-d8bf-4b61-b4b6-7bef0f3f84b2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Collision">
-      <UniqueIdentifier>{96645b3a-28b8-40c0-89b5-83719dd17b1f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Collision\Shapes">
-      <UniqueIdentifier>{d8a3ee96-0d4c-415f-a694-e1ce8d63ed03}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Common">
-      <UniqueIdentifier>{6fb98b1a-e5f0-40c9-ae00-f189434b1d35}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics">
-      <UniqueIdentifier>{037c1e6f-7907-4d29-b704-b29febe1f0a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Contacts">
-      <UniqueIdentifier>{d7ec478b-d927-4ac0-ac67-55634a000506}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Joints">
-      <UniqueIdentifier>{f371722f-d000-4f6d-83bb-db0ea8e01c57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\Box2D\Rope">
-      <UniqueIdentifier>{a935fb98-a644-44a7-942f-f50e18b68fce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxBox2d\libs\triangle">
-      <UniqueIdentifier>{6c57ef27-3fe3-4f22-bb74-a169a38c7724}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools">
-      <UniqueIdentifier>{c2078449-cf37-46fe-b0b1-27fdee005112}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src">
-      <UniqueIdentifier>{214061b9-6b91-41d5-ad6b-dcb8940ee2bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\drawforces">
-      <UniqueIdentifier>{032a0419-1165-4978-a2ca-bb70ccdd4a7c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\fluid">
-      <UniqueIdentifier>{df78996b-0c94-43a1-bb80-831115acb457}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\mask">
-      <UniqueIdentifier>{af5525b7-ae91-4f69-a567-a237f041babe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\opticalflow">
-      <UniqueIdentifier>{8367e8bf-7902-4571-b86d-90c811cc5023}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\particles">
-      <UniqueIdentifier>{7d15158c-ac57-45b8-b9bd-205b4f1739e2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\splitvelocity">
-      <UniqueIdentifier>{ff9625c5-30c1-4f2b-9dfd-7b5d40e0d6f8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\tools">
-      <UniqueIdentifier>{39891885-1e46-4b41-9fe2-19e4c29f9c93}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\filters">
-      <UniqueIdentifier>{4e4a6609-ae1e-43b0-9c93-76d8386a2e33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\visualisation">
-      <UniqueIdentifier>{75d21566-4d7c-408a-b9ad-70d3b685e2f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxGui">
-      <UniqueIdentifier>{a6b57c43-6380-4df2-8384-361f42b54e3d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxGui\src">
-      <UniqueIdentifier>{5b243d8c-d163-44d5-a590-f8d45f679acd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="apps">
-      <UniqueIdentifier>{3d15cf57-b5c7-4492-b580-a4ebc2e9e6bc}</UniqueIdentifier>
+      <UniqueIdentifier>{fdeeffd3-9524-4284-985c-a31cfd2cab70}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps">
-      <UniqueIdentifier>{9a921248-697b-4ad5-b601-25d0f02f5ce4}</UniqueIdentifier>
+      <UniqueIdentifier>{9087023d-e736-4efe-a2c1-581a1ddbed02}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim">
-      <UniqueIdentifier>{4d10d8c4-7d87-4e0d-8c7b-75d821cd8e04}</UniqueIdentifier>
+      <UniqueIdentifier>{4ab01f3a-9704-4447-b2e7-abd8aec24474}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\src">
-      <UniqueIdentifier>{99c4692c-b8d6-4aa4-9a76-e1f6db70bad7}</UniqueIdentifier>
+      <UniqueIdentifier>{9a066c32-992b-4fc1-8a21-4f3d84328a2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{40795ee2-dec9-47bc-a16a-410d293d6236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d">
+      <UniqueIdentifier>{202c76e5-ae23-4f89-906c-2e60c6b8a36c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\src">
+      <UniqueIdentifier>{4d98a2b8-bd54-484f-bcfd-b7eaa2217c4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs">
+      <UniqueIdentifier>{ff5ff82d-a8bf-4db1-8c63-0a9e20c1c53c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D">
+      <UniqueIdentifier>{ee9e5005-2b15-4d44-bea6-20064deb244a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Collision">
+      <UniqueIdentifier>{376645c1-6cdc-4446-8796-5d3f2a0106ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Collision\Shapes">
+      <UniqueIdentifier>{b11a73d2-bfd8-4bcd-bf17-f164da7c2aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Common">
+      <UniqueIdentifier>{07b1efcc-297f-44b4-92db-13b1d68ec524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics">
+      <UniqueIdentifier>{0ec9531b-973e-4da2-a88e-3b6ed3180d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Contacts">
+      <UniqueIdentifier>{20a7150a-373d-403c-9bde-70cef5699e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Joints">
+      <UniqueIdentifier>{3d6f9b06-55cf-45fe-a1f0-8c99da07ac0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Rope">
+      <UniqueIdentifier>{e94456ce-75fc-4a9e-9e6e-d3944c2a4ba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\triangle">
+      <UniqueIdentifier>{a6af1652-7c04-4b5f-864f-44fd73dff71e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools">
+      <UniqueIdentifier>{7a5e2ad9-622b-485e-8da4-95ac80eeae99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src">
+      <UniqueIdentifier>{acf8d25c-8456-4f9a-9a17-11f254e0cf00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\drawforces">
+      <UniqueIdentifier>{11c41fb2-0776-461e-bc03-3efc3e416041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\fluid">
+      <UniqueIdentifier>{c59d533f-5494-4fbd-81e4-6eb0cb8c56e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\mask">
+      <UniqueIdentifier>{b86f43b0-e2ff-407b-85f5-69a314edc6c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\opticalflow">
+      <UniqueIdentifier>{8f1a6325-10e1-4ad1-a093-f00e6450fe2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\particles">
+      <UniqueIdentifier>{f01e7586-9b53-47d8-8fa2-c13204ffa722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\splitvelocity">
+      <UniqueIdentifier>{3eafcfb4-3069-4ec4-95dc-07dc8fcfd821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\tools">
+      <UniqueIdentifier>{7517a8df-f213-4d0e-b350-22aeacf92039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\filters">
+      <UniqueIdentifier>{07eac073-1074-425b-86ad-3de8f63ca8c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\visualisation">
+      <UniqueIdentifier>{3252f7ae-03b8-4646-9531-d76d08199feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{94305252-ac8f-4cac-b319-f946274e7904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{1ab813cb-b8b0-40e7-8fbc-a5dff962119d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>apps\myApps\barim\src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ofApp.cpp">
-      <Filter>apps\myApps\barim\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.cpp">
       <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
@@ -312,11 +306,14 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>apps\myApps\barim\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>apps\myApps\barim\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ofApp.h">
-      <Filter>apps\myApps\barim\src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.h">
       <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
@@ -533,27 +530,6 @@
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\drawforces\ftDrawMouseForces.h">
       <Filter>addons\ofxFlowTools\src\drawforces</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftContrastShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftDecayShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftEOGShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftGaussianBlurShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftHSLShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftLuminanceShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftTimeBlurShader.h">
-      <Filter>addons\ofxFlowTools\src\filters</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftAdvectShader.h">
       <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
@@ -656,6 +632,27 @@
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftToScalarShader.h">
       <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftContrastShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftDecayShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftEOGShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftGaussianBlurShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftHSLShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftLuminanceShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftTimeBlurShader.h">
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftDisplayScalar.h">
       <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
@@ -718,6 +715,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>apps\myApps\barim\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

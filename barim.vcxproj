@@ -22,6 +22,7 @@
     <ProjectGuid>{F1B43872-71C1-4DF1-8508-2719386D7018}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>barim</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -99,14 +100,36 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxBox2d\libs;..\..\..\addons\ofxBox2d\libs\Box2D;..\..\..\addons\ofxBox2d\libs\Box2D\Collision;..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;..\..\..\addons\ofxBox2d\libs\Box2D\Common;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;..\..\..\addons\ofxBox2d\libs\Box2D\Rope;..\..\..\addons\ofxBox2d\libs\triangle;..\..\..\addons\ofxBox2d\src;..\..\..\addons\ofxFlowTools\src;..\..\..\addons\ofxFlowTools\src\drawforces;..\..\..\addons\ofxFlowTools\src\filters;..\..\..\addons\ofxFlowTools\src\fluid;..\..\..\addons\ofxFlowTools\src\mask;..\..\..\addons\ofxFlowTools\src\opticalflow;..\..\..\addons\ofxFlowTools\src\particles;..\..\..\addons\ofxFlowTools\src\splitvelocity;..\..\..\addons\ofxFlowTools\src\tools;..\..\..\addons\ofxFlowTools\src\visualisation;..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);
+src;
+..\..\..\addons\ofxBox2d\libs;
+..\..\..\addons\ofxBox2d\libs\Box2D;
+..\..\..\addons\ofxBox2d\libs\Box2D\Collision;
+..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;
+..\..\..\addons\ofxBox2d\libs\Box2D\Common;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;
+..\..\..\addons\ofxBox2d\libs\Box2D\Rope;
+..\..\..\addons\ofxBox2d\libs\triangle;
+..\..\..\addons\ofxBox2d\src;
+..\..\..\addons\ofxFlowTools\src;
+..\..\..\addons\ofxFlowTools\src\drawforces;
+..\..\..\addons\ofxFlowTools\src\filters;
+..\..\..\addons\ofxFlowTools\src\fluid;
+..\..\..\addons\ofxFlowTools\src\mask;
+..\..\..\addons\ofxFlowTools\src\opticalflow;
+..\..\..\addons\ofxFlowTools\src\particles;
+..\..\..\addons\ofxFlowTools\src\splitvelocity;
+..\..\..\addons\ofxFlowTools\src\tools;
+..\..\..\addons\ofxFlowTools\src\visualisation;
+..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -115,10 +138,9 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_MODERN__;__PLATFORM_WIN32__;__WINDOWS_DS__;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxBox2d\libs;..\..\..\addons\ofxBox2d\libs\Box2D;..\..\..\addons\ofxBox2d\libs\Box2D\Collision;..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;..\..\..\addons\ofxBox2d\libs\Box2D\Common;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;..\..\..\addons\ofxBox2d\libs\Box2D\Rope;..\..\..\addons\ofxBox2d\libs\triangle;..\..\..\addons\ofxBox2d\src;..\..\..\addons\ofxFlowTools\src;..\..\..\addons\ofxFlowTools\src\drawforces;..\..\..\addons\ofxFlowTools\src\filters;..\..\..\addons\ofxFlowTools\src\fluid;..\..\..\addons\ofxFlowTools\src\mask;..\..\..\addons\ofxFlowTools\src\opticalflow;..\..\..\addons\ofxFlowTools\src\particles;..\..\..\addons\ofxFlowTools\src\splitvelocity;..\..\..\addons\ofxFlowTools\src\tools;..\..\..\addons\ofxFlowTools\src\visualisation;..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -126,7 +148,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -137,7 +158,30 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxBox2d\libs;..\..\..\addons\ofxBox2d\libs\Box2D;..\..\..\addons\ofxBox2d\libs\Box2D\Collision;..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;..\..\..\addons\ofxBox2d\libs\Box2D\Common;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;..\..\..\addons\ofxBox2d\libs\Box2D\Rope;..\..\..\addons\ofxBox2d\libs\triangle;..\..\..\addons\ofxBox2d\src;..\..\..\addons\ofxFlowTools\src;..\..\..\addons\ofxFlowTools\src\drawforces;..\..\..\addons\ofxFlowTools\src\filters;..\..\..\addons\ofxFlowTools\src\fluid;..\..\..\addons\ofxFlowTools\src\mask;..\..\..\addons\ofxFlowTools\src\opticalflow;..\..\..\addons\ofxFlowTools\src\particles;..\..\..\addons\ofxFlowTools\src\splitvelocity;..\..\..\addons\ofxFlowTools\src\tools;..\..\..\addons\ofxFlowTools\src\visualisation;..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);
+src;
+..\..\..\addons\ofxBox2d\libs;
+..\..\..\addons\ofxBox2d\libs\Box2D;
+..\..\..\addons\ofxBox2d\libs\Box2D\Collision;
+..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;
+..\..\..\addons\ofxBox2d\libs\Box2D\Common;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;
+..\..\..\addons\ofxBox2d\libs\Box2D\Rope;
+..\..\..\addons\ofxBox2d\libs\triangle;
+..\..\..\addons\ofxBox2d\src;
+..\..\..\addons\ofxFlowTools\src;
+..\..\..\addons\ofxFlowTools\src\drawforces;
+..\..\..\addons\ofxFlowTools\src\filters;
+..\..\..\addons\ofxFlowTools\src\fluid;
+..\..\..\addons\ofxFlowTools\src\mask;
+..\..\..\addons\ofxFlowTools\src\opticalflow;
+..\..\..\addons\ofxFlowTools\src\particles;
+..\..\..\addons\ofxFlowTools\src\splitvelocity;
+..\..\..\addons\ofxFlowTools\src\tools;
+..\..\..\addons\ofxFlowTools\src\visualisation;
+..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -148,7 +192,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -156,10 +199,33 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_MODERN__;__PLATFORM_WIN32__;__WINDOWS_DS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxBox2d\libs;..\..\..\addons\ofxBox2d\libs\Box2D;..\..\..\addons\ofxBox2d\libs\Box2D\Collision;..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;..\..\..\addons\ofxBox2d\libs\Box2D\Common;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;..\..\..\addons\ofxBox2d\libs\Box2D\Rope;..\..\..\addons\ofxBox2d\libs\triangle;..\..\..\addons\ofxBox2d\src;..\..\..\addons\ofxFlowTools\src;..\..\..\addons\ofxFlowTools\src\drawforces;..\..\..\addons\ofxFlowTools\src\filters;..\..\..\addons\ofxFlowTools\src\fluid;..\..\..\addons\ofxFlowTools\src\mask;..\..\..\addons\ofxFlowTools\src\opticalflow;..\..\..\addons\ofxFlowTools\src\particles;..\..\..\addons\ofxFlowTools\src\splitvelocity;..\..\..\addons\ofxFlowTools\src\tools;..\..\..\addons\ofxFlowTools\src\visualisation;..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);
+src;
+..\..\..\addons\ofxBox2d\libs;
+..\..\..\addons\ofxBox2d\libs\Box2D;
+..\..\..\addons\ofxBox2d\libs\Box2D\Collision;
+..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes;
+..\..\..\addons\ofxBox2d\libs\Box2D\Common;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts;
+..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints;
+..\..\..\addons\ofxBox2d\libs\Box2D\Rope;
+..\..\..\addons\ofxBox2d\libs\triangle;
+..\..\..\addons\ofxBox2d\src;
+..\..\..\addons\ofxFlowTools\src;
+..\..\..\addons\ofxFlowTools\src\drawforces;
+..\..\..\addons\ofxFlowTools\src\filters;
+..\..\..\addons\ofxFlowTools\src\fluid;
+..\..\..\addons\ofxFlowTools\src\mask;
+..\..\..\addons\ofxFlowTools\src\opticalflow;
+..\..\..\addons\ofxFlowTools\src\particles;
+..\..\..\addons\ofxFlowTools\src\splitvelocity;
+..\..\..\addons\ofxFlowTools\src\tools;
+..\..\..\addons\ofxFlowTools\src\visualisation;
+..\..\..\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -169,7 +235,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -392,6 +457,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\addons\ofxKinectForWindows2\ofxKinectForWindows2Lib\ofxKinectForWindows2Lib.vcxproj">
       <Project>{f6008d6a-6d39-4b68-840e-e7ac8ed855da}</Project>
+    </ProjectReference>
+    <ProjectReference Include="lib\chuck\src\visual-studio\chuck.vcxproj">
+      <Project>{c83d6d51-d477-4bab-b2c2-f0698b9d3fb1}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
