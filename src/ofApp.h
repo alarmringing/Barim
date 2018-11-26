@@ -14,10 +14,14 @@
 #define PI 3.14159265358979
 #define SND_BUFFER_SIZE 1024
 
+#define GONGPATH "ckfiles/gongPlayer.ck"
+
 class ofApp : public ofBaseApp {
 
 public:
 	void setup();
+	void sporkNewChuckFile(string fileName);
+	void checkHeadGong();
 	void updateKinectData();
 	void update();
 	void draw();
@@ -41,7 +45,15 @@ public:
 	bool useChuck = true;
 	float averageVolume;
 
+	// Kinect setup
 	ofxKFW2::Device kinect;
+	ofxKinectForWindows2::Data::Body previousBody;
+	ofxKinectForWindows2::Data::Body currentBody;
+
+	// Gong specific
+	float lastGongTime = 0;
+	float gongMinInterval = 0.5;
+	float gongTriggerVelocity = -0.7;
 
 	ofxPanel gui;
 	ofxLabel fps;

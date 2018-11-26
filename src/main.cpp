@@ -10,7 +10,6 @@ ofApp* mainOfApp;
 //-----------------------------------------------------------------------------
 int audioCallback(void *outputBuffer, void *inputBuffer, unsigned int numFrames,
 	double streamTime, RtAudioStreamStatus status, void *data) {
-	cout << "@@@@@@@@@@@@@@callback!@@@@@@@@@@@@@@@@" << endl;
 	SAMPLE * input = (SAMPLE *)inputBuffer;
 	SAMPLE * output = (SAMPLE *)outputBuffer;
 
@@ -89,15 +88,9 @@ void setupAudio() {
 	mainOfApp->myChuck->setParam(CHUCK_PARAM_SAMPLE_RATE, MY_SRATE);
 	mainOfApp->myChuck->init();
 
-	string path = "ckfiles/sineTest.ck";
-	string args = "";
-	mainOfApp->myChuck->compileFile(path, args);
-
-
 	// Run updateDrivenByAudio between each stream update.
 	try {
 		audio.startStream();
-		cout << "Audio started!" << endl;
 		ofRunApp(mainOfApp);
 		audio.stopStream();
 	}
