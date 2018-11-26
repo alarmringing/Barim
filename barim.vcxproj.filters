@@ -112,6 +112,78 @@
     <Filter Include="ddons\ofxFlowTools\src\visualisation">
       <UniqueIdentifier>{40cd4c85-4ae2-4b72-b762-30f21ee50c22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{db3a5b12-8424-499d-97ed-11d10792a7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d">
+      <UniqueIdentifier>{76225528-cc32-4fda-8936-141e0fed9e1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\src">
+      <UniqueIdentifier>{bf643446-3593-4f79-9bc6-84d26d06005c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs">
+      <UniqueIdentifier>{df6ffb96-41f5-4efc-a33b-b3bd9d6a49f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D">
+      <UniqueIdentifier>{3ce7dc26-9b39-4c4f-87fd-db172c74913e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Collision">
+      <UniqueIdentifier>{980b30c3-8d64-4f51-bfdc-044b80e056ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Collision\Shapes">
+      <UniqueIdentifier>{ed5d3ece-6344-4de7-98b1-4c1efe1195a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Common">
+      <UniqueIdentifier>{e52f67d2-f563-4484-81c6-ef10daaeec59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics">
+      <UniqueIdentifier>{fb33b2b5-d0cf-43f1-94fc-db57415977e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Contacts">
+      <UniqueIdentifier>{080529e8-c063-49d7-9ce3-be26b594e9bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Joints">
+      <UniqueIdentifier>{ecf0c606-3c49-4032-b01f-4f3bff33a3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\Box2D\Rope">
+      <UniqueIdentifier>{b5a84599-6423-4830-aef3-7c5efeda232a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d\libs\triangle">
+      <UniqueIdentifier>{a6caf528-73c9-474e-a4e6-0b31ead3e365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools">
+      <UniqueIdentifier>{fbd9be64-ba2e-4eba-a5c6-453732d7064c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src">
+      <UniqueIdentifier>{8cf04e23-4991-47f5-89b7-b60c99d969bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\drawforces">
+      <UniqueIdentifier>{f075389d-45ed-408e-98cb-ba89da18d029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\filters">
+      <UniqueIdentifier>{2e8af308-e40e-4f1d-8eef-73e554bbf490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\fluid">
+      <UniqueIdentifier>{82db74fe-116e-42c4-a44f-a28dd4e63b65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\mask">
+      <UniqueIdentifier>{d346c610-47d9-41f2-b299-77f33d228e8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\opticalflow">
+      <UniqueIdentifier>{06400d77-be8b-4136-ad7a-068b755dde8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\particles">
+      <UniqueIdentifier>{7842ac4e-5f64-4072-aec7-57ecba682b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\splitvelocity">
+      <UniqueIdentifier>{0c4ad38c-8730-4bf7-824a-465d3f57a8de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\tools">
+      <UniqueIdentifier>{a42f2f93-6352-485e-8ba7-730a33ea719b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\visualisation">
+      <UniqueIdentifier>{29083922-dd33-49d7-b2b8-52a217a890b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc">

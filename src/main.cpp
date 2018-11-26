@@ -10,7 +10,7 @@ ofApp* mainOfApp;
 //-----------------------------------------------------------------------------
 int audioCallback(void *outputBuffer, void *inputBuffer, unsigned int numFrames,
 	double streamTime, RtAudioStreamStatus status, void *data) {
-	cout << "calabck!" << endl;
+	cout << "@@@@@@@@@@@@@@callback!@@@@@@@@@@@@@@@@" << endl;
 	SAMPLE * input = (SAMPLE *)inputBuffer;
 	SAMPLE * output = (SAMPLE *)outputBuffer;
 
@@ -97,8 +97,9 @@ void setupAudio() {
 	// Run updateDrivenByAudio between each stream update.
 	try {
 		audio.startStream();
-		// updateDrivenByAudio();
-		//audio.stopStream();
+		cout << "Audio started!" << endl;
+		ofRunApp(mainOfApp);
+		audio.stopStream();
 	}
 	catch (RtError& e) {
 		cout << e.getMessage() << endl;
@@ -109,7 +110,6 @@ cleanup:
 	// close if open
 	if (audio.isStreamOpen())
 		audio.closeStream();
-
 	return;
 }
 
@@ -122,5 +122,5 @@ int main( ){
 	// pass in width and height too:
 	mainOfApp = new ofApp();
 	setupAudio();
-	ofRunApp(mainOfApp);
+	
 }
