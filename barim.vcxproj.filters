@@ -1,1235 +1,1174 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="pps\myApps\barim">
-      <UniqueIdentifier>{73a625c2-a409-472a-9483-3cfa4f6dc704}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps">
-      <UniqueIdentifier>{ec5d1e7c-f083-4eae-897f-5ac5a6648710}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps">
-      <UniqueIdentifier>{c03923e0-44f9-4eff-a3bd-1ec2f8eb272d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\src">
-      <UniqueIdentifier>{94477aa6-2a61-405d-ade0-b2210d5ee538}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\src">
-      <UniqueIdentifier>{d35a958c-8328-463c-b3fc-ac6938990273}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d">
-      <UniqueIdentifier>{4a3944c8-9dac-4f31-b4b2-f6a347cb7ac2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons">
+    <Filter Include="addons">
       <UniqueIdentifier>{da73e3e4-08d5-43c9-a726-c084235b9238}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Collision">
-      <UniqueIdentifier>{1aa6147b-2c63-4ad3-80df-d4bd4a219743}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D">
-      <UniqueIdentifier>{87e8fa5c-965d-4c68-a6cf-f61ebdcd83de}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs">
-      <UniqueIdentifier>{808f83ee-69e3-4419-9e51-e8079683aaf2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Collision\Shapes">
-      <UniqueIdentifier>{505f4f99-f275-4a42-b834-a3c2aee97d39}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Common">
-      <UniqueIdentifier>{5357f690-3fd2-40ec-aea9-244b19c013eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Dynamics">
-      <UniqueIdentifier>{8fce4be9-4eda-468a-ad13-0d28d21d5ca4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts">
-      <UniqueIdentifier>{ac8640a6-e0e3-44f5-baa6-3312a23e07c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Dynamics\Joints">
-      <UniqueIdentifier>{c4d1cbac-105a-4963-9fa1-3d3de7c76c04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\Box2D\Rope">
-      <UniqueIdentifier>{29681968-e5df-4954-bac5-5298506de2a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxBox2d\libs\triangle">
-      <UniqueIdentifier>{adbd9088-31b6-44d8-acd6-a5b5008757da}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\drawforces">
-      <UniqueIdentifier>{3b22e850-2530-4a79-9299-d4099ea2d9b4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src">
-      <UniqueIdentifier>{64667746-e707-4b93-92aa-a7f663df866b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools">
-      <UniqueIdentifier>{98610f4e-b689-49b9-98db-bbd508b62159}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\fluid">
-      <UniqueIdentifier>{2e0b0f5a-1a71-49f1-a4ed-79b307be6474}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\mask">
-      <UniqueIdentifier>{c3783fdb-b019-4ef7-993d-409d2ad4f558}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\opticalflow">
-      <UniqueIdentifier>{3687c8bc-1c4e-42ac-8f8f-6703e3a316eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\particles">
-      <UniqueIdentifier>{984a9a02-9cb3-412e-8364-be1428035f1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\splitvelocity">
-      <UniqueIdentifier>{33d1f849-1868-4053-bd25-ee33d2134ad5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\tools">
-      <UniqueIdentifier>{8a3c0587-34e5-405e-a7f4-dd9bb7a92f2e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxGui\src">
-      <UniqueIdentifier>{6d839351-b56b-433f-bfe6-4be3d8f5c692}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxGui">
-      <UniqueIdentifier>{c3e8fce4-0518-49ab-84af-a6954964a499}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib\chuck\core\lo">
-      <UniqueIdentifier>{835dfff7-841d-4415-b7ea-1111ad698d08}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib\chuck\core">
-      <UniqueIdentifier>{8d84f119-544a-49dc-835d-7434e0cfb311}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib\chuck">
-      <UniqueIdentifier>{7ca7c0b5-7fd1-4922-8953-1a8353dee580}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib">
-      <UniqueIdentifier>{71bcbc75-2a52-4f1e-bff4-7acec9760b8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib\chuck\core\regex">
-      <UniqueIdentifier>{6b57514d-e015-49dc-95e5-6f50231bba19}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib\chuck\host\RtAudio">
-      <UniqueIdentifier>{f769a34f-88db-4574-8e41-79e6fc64cbee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="pps\myApps\barim\lib\chuck\host">
-      <UniqueIdentifier>{2eb0146a-530e-44cc-98c8-79327c2bb722}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\filters">
-      <UniqueIdentifier>{7c5822d9-2346-42b3-9ff0-9ac4a66f812d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ddons\ofxFlowTools\src\visualisation">
-      <UniqueIdentifier>{40cd4c85-4ae2-4b72-b762-30f21ee50c22}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons">
-      <UniqueIdentifier>{db3a5b12-8424-499d-97ed-11d10792a7ca}</UniqueIdentifier>
-    </Filter>
     <Filter Include="addons\ofxBox2d">
-      <UniqueIdentifier>{76225528-cc32-4fda-8936-141e0fed9e1b}</UniqueIdentifier>
+      <UniqueIdentifier>{4a3944c8-9dac-4f31-b4b2-f6a347cb7ac2}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\src">
-      <UniqueIdentifier>{bf643446-3593-4f79-9bc6-84d26d06005c}</UniqueIdentifier>
+      <UniqueIdentifier>{d35a958c-8328-463c-b3fc-ac6938990273}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs">
-      <UniqueIdentifier>{df6ffb96-41f5-4efc-a33b-b3bd9d6a49f0}</UniqueIdentifier>
+      <UniqueIdentifier>{808f83ee-69e3-4419-9e51-e8079683aaf2}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D">
-      <UniqueIdentifier>{3ce7dc26-9b39-4c4f-87fd-db172c74913e}</UniqueIdentifier>
+      <UniqueIdentifier>{87e8fa5c-965d-4c68-a6cf-f61ebdcd83de}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Collision">
-      <UniqueIdentifier>{980b30c3-8d64-4f51-bfdc-044b80e056ee}</UniqueIdentifier>
+      <UniqueIdentifier>{1aa6147b-2c63-4ad3-80df-d4bd4a219743}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Collision\Shapes">
-      <UniqueIdentifier>{ed5d3ece-6344-4de7-98b1-4c1efe1195a9}</UniqueIdentifier>
+      <UniqueIdentifier>{505f4f99-f275-4a42-b834-a3c2aee97d39}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Common">
-      <UniqueIdentifier>{e52f67d2-f563-4484-81c6-ef10daaeec59}</UniqueIdentifier>
+      <UniqueIdentifier>{5357f690-3fd2-40ec-aea9-244b19c013eb}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics">
-      <UniqueIdentifier>{fb33b2b5-d0cf-43f1-94fc-db57415977e5}</UniqueIdentifier>
+      <UniqueIdentifier>{8fce4be9-4eda-468a-ad13-0d28d21d5ca4}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Contacts">
-      <UniqueIdentifier>{080529e8-c063-49d7-9ce3-be26b594e9bf}</UniqueIdentifier>
+      <UniqueIdentifier>{ac8640a6-e0e3-44f5-baa6-3312a23e07c9}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Joints">
-      <UniqueIdentifier>{ecf0c606-3c49-4032-b01f-4f3bff33a3b9}</UniqueIdentifier>
+      <UniqueIdentifier>{c4d1cbac-105a-4963-9fa1-3d3de7c76c04}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Rope">
-      <UniqueIdentifier>{b5a84599-6423-4830-aef3-7c5efeda232a}</UniqueIdentifier>
+      <UniqueIdentifier>{29681968-e5df-4954-bac5-5298506de2a3}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\triangle">
-      <UniqueIdentifier>{a6caf528-73c9-474e-a4e6-0b31ead3e365}</UniqueIdentifier>
+      <UniqueIdentifier>{adbd9088-31b6-44d8-acd6-a5b5008757da}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools">
-      <UniqueIdentifier>{fbd9be64-ba2e-4eba-a5c6-453732d7064c}</UniqueIdentifier>
+      <UniqueIdentifier>{98610f4e-b689-49b9-98db-bbd508b62159}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src">
-      <UniqueIdentifier>{8cf04e23-4991-47f5-89b7-b60c99d969bf}</UniqueIdentifier>
+      <UniqueIdentifier>{64667746-e707-4b93-92aa-a7f663df866b}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\drawforces">
-      <UniqueIdentifier>{f075389d-45ed-408e-98cb-ba89da18d029}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxFlowTools\src\filters">
-      <UniqueIdentifier>{2e8af308-e40e-4f1d-8eef-73e554bbf490}</UniqueIdentifier>
+      <UniqueIdentifier>{3b22e850-2530-4a79-9299-d4099ea2d9b4}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\fluid">
-      <UniqueIdentifier>{82db74fe-116e-42c4-a44f-a28dd4e63b65}</UniqueIdentifier>
+      <UniqueIdentifier>{2e0b0f5a-1a71-49f1-a4ed-79b307be6474}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\mask">
-      <UniqueIdentifier>{d346c610-47d9-41f2-b299-77f33d228e8f}</UniqueIdentifier>
+      <UniqueIdentifier>{c3783fdb-b019-4ef7-993d-409d2ad4f558}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\opticalflow">
-      <UniqueIdentifier>{06400d77-be8b-4136-ad7a-068b755dde8a}</UniqueIdentifier>
+      <UniqueIdentifier>{3687c8bc-1c4e-42ac-8f8f-6703e3a316eb}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\particles">
-      <UniqueIdentifier>{7842ac4e-5f64-4072-aec7-57ecba682b67}</UniqueIdentifier>
+      <UniqueIdentifier>{984a9a02-9cb3-412e-8364-be1428035f1a}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\splitvelocity">
-      <UniqueIdentifier>{0c4ad38c-8730-4bf7-824a-465d3f57a8de}</UniqueIdentifier>
+      <UniqueIdentifier>{33d1f849-1868-4053-bd25-ee33d2134ad5}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\tools">
-      <UniqueIdentifier>{a42f2f93-6352-485e-8ba7-730a33ea719b}</UniqueIdentifier>
+      <UniqueIdentifier>{8a3c0587-34e5-405e-a7f4-dd9bb7a92f2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxFlowTools\src\filters">
+      <UniqueIdentifier>{7c5822d9-2346-42b3-9ff0-9ac4a66f812d}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\visualisation">
-      <UniqueIdentifier>{29083922-dd33-49d7-b2b8-52a217a890b0}</UniqueIdentifier>
+      <UniqueIdentifier>{40cd4c85-4ae2-4b72-b762-30f21ee50c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{c3e8fce4-0518-49ab-84af-a6954964a499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{6d839351-b56b-433f-bfe6-4be3d8f5c692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps">
+      <UniqueIdentifier>{c03923e0-44f9-4eff-a3bd-1ec2f8eb272d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps">
+      <UniqueIdentifier>{ec5d1e7c-f083-4eae-897f-5ac5a6648710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim">
+      <UniqueIdentifier>{73a625c2-a409-472a-9483-3cfa4f6dc704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\src">
+      <UniqueIdentifier>{94477aa6-2a61-405d-ade0-b2210d5ee538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib">
+      <UniqueIdentifier>{71bcbc75-2a52-4f1e-bff4-7acec9760b8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib\chuck">
+      <UniqueIdentifier>{7ca7c0b5-7fd1-4922-8953-1a8353dee580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib\chuck\core">
+      <UniqueIdentifier>{8d84f119-544a-49dc-835d-7434e0cfb311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib\chuck\core\lo">
+      <UniqueIdentifier>{835dfff7-841d-4415-b7ea-1111ad698d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib\chuck\core\regex">
+      <UniqueIdentifier>{6b57514d-e015-49dc-95e5-6f50231bba19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib\chuck\host">
+      <UniqueIdentifier>{2eb0146a-530e-44cc-98c8-79327c2bb722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\lib\chuck\host\RtAudio">
+      <UniqueIdentifier>{f769a34f-88db-4574-8e41-79e6fc64cbee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="apps\myApps\barim\shaders">
+      <UniqueIdentifier>{b88b52af-3c57-4c21-a4b2-46d7062000a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc">
-      <Filter>pps\myApps\barim</Filter>
+      <Filter>apps\myApps\barim</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
-      <Filter>pps\myApps\barim\src</Filter>
+      <Filter>apps\myApps\barim\src</Filter>
     </ClCompile>
     <ClCompile Include="src\ofApp.cpp">
-      <Filter>pps\myApps\barim\src</Filter>
+      <Filter>apps\myApps\barim\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dBaseShape.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dCircle.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dConvexPoly.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dEdge.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dJoint.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dPolygon.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2dRect.cpp">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2BroadPhase.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2CollideCircle.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2CollideEdge.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2CollidePolygon.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2Collision.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2Distance.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2DynamicTree.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2TimeOfImpact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2ChainShape.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2CircleShape.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2EdgeShape.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2PolygonShape.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2BlockAllocator.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Draw.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Math.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Settings.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2StackAllocator.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Timer.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2Body.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2ContactManager.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2Fixture.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2Island.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2World.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2WorldCallbacks.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2CircleContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2Contact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2ContactSolver.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2PolygonContact.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2DistanceJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2FrictionJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2GearJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2Joint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2MotorJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2MouseJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2PrismaticJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2PulleyJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2RevoluteJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2RopeJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2WeldJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2WheelJoint.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\Box2D\Rope\b2Rope.cpp">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Rope</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Rope</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\libs\triangle\del_impl.cpp">
-      <Filter>ddons\ofxBox2d\libs\triangle</Filter>
+      <Filter>addons\ofxBox2d\libs\triangle</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\drawforces\ftDrawForce.cpp">
-      <Filter>ddons\ofxFlowTools\src\drawforces</Filter>
+      <Filter>addons\ofxFlowTools\src\drawforces</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\drawforces\ftDrawMouseForces.cpp">
-      <Filter>ddons\ofxFlowTools\src\drawforces</Filter>
+      <Filter>addons\ofxFlowTools\src\drawforces</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\fluid\ftFluidSimulation.cpp">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\mask\ftVelocityMask.cpp">
-      <Filter>ddons\ofxFlowTools\src\mask</Filter>
+      <Filter>addons\ofxFlowTools\src\mask</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\opticalflow\ftOpticalFlow.cpp">
-      <Filter>ddons\ofxFlowTools\src\opticalflow</Filter>
+      <Filter>addons\ofxFlowTools\src\opticalflow</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\particles\ftParticleFlow.cpp">
-      <Filter>ddons\ofxFlowTools\src\particles</Filter>
+      <Filter>addons\ofxFlowTools\src\particles</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvAverage.cpp">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxFlowTools\src\tools\ftAverageVelocity.cpp">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\address.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\blob.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\bundle.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\message.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\method.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\pattern_match.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\send.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\server.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\lo\timetag.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\regcomp.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\regerror.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\regexec.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-ast.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-compile.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-filter.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-match-approx.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-match-backtrack.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-match-parallel.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-mem.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-parse.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\tre-stack.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\regex\xmalloc.c">
-      <Filter>pps\myApps\barim\lib\chuck\core\regex</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\regex</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_absyn.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_carrier.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_compile.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_dl.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_emit.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_errmsg.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_frame.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_instr.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_io.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_lang.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_oo.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_otf.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_parse.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_scan.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_shell.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_stats.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_symbol.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_table.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_type.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_ugen.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_utils.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_vm.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\chuck_win32.c">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\hidio_sdl.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\midiio_rtmidi.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\rtmidi.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\uana_extract.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\uana_xform.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ugen_filter.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ugen_osc.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ugen_stk.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ugen_xxx.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ulib_machine.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ulib_math.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ulib_opsc.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ulib_regex.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\ulib_std.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_buffers.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_console.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_hid.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_math.c">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_network.c">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_opsc.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_raw.c">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_serial.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_sndfile.c">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_string.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_thread.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\core\util_xforms.c">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClCompile>
     <ClCompile Include="lib\chuck\host\RtAudio\RtAudio.cpp">
-      <Filter>pps\myApps\barim\lib\chuck\host\RtAudio</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
-      <Filter>pps\myApps\barim\src</Filter>
+      <Filter>apps\myApps\barim\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dBaseShape.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dCircle.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dContactListener.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dConvexPoly.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dEdge.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dJoint.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dPolygon.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dPolygonUtils.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dRect.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dRender.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dUtils.h">
-      <Filter>ddons\ofxBox2d\src</Filter>
+      <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Box2D.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2BroadPhase.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2Collision.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2Distance.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2DynamicTree.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\b2TimeOfImpact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2ChainShape.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2CircleShape.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2EdgeShape.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2PolygonShape.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Collision\Shapes\b2Shape.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Collision\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2BlockAllocator.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Draw.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2GrowableStack.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Math.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Settings.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2StackAllocator.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Common\b2Timer.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Common</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2Body.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2ContactManager.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2Fixture.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2Island.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2TimeStep.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2World.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\b2WorldCallbacks.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2CircleContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2Contact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2ContactSolver.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Contacts\b2PolygonContact.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Contacts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2DistanceJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2FrictionJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2GearJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2Joint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2MotorJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2MouseJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2PrismaticJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2PulleyJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2RevoluteJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2RopeJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2WeldJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Dynamics\Joints\b2WheelJoint.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Dynamics\Joints</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\Box2D\Rope\b2Rope.h">
-      <Filter>ddons\ofxBox2d\libs\Box2D\Rope</Filter>
+      <Filter>addons\ofxBox2d\libs\Box2D\Rope</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\triangle\assert.hpp">
-      <Filter>ddons\ofxBox2d\libs\triangle</Filter>
+      <Filter>addons\ofxBox2d\libs\triangle</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\triangle\del_interface.hpp">
-      <Filter>ddons\ofxBox2d\libs\triangle</Filter>
+      <Filter>addons\ofxBox2d\libs\triangle</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\triangle\dpoint.hpp">
-      <Filter>ddons\ofxBox2d\libs\triangle</Filter>
+      <Filter>addons\ofxBox2d\libs\triangle</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\triangle\triangle.h">
-      <Filter>ddons\ofxBox2d\libs\triangle</Filter>
+      <Filter>addons\ofxBox2d\libs\triangle</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\libs\triangle\triangle_impl.hpp">
-      <Filter>ddons\ofxBox2d\libs\triangle</Filter>
+      <Filter>addons\ofxBox2d\libs\triangle</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\ftFbo.h">
-      <Filter>ddons\ofxFlowTools\src</Filter>
+      <Filter>addons\ofxFlowTools\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\ftShader.h">
-      <Filter>ddons\ofxFlowTools\src</Filter>
+      <Filter>addons\ofxFlowTools\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\ftSwapBuffer.h">
-      <Filter>ddons\ofxFlowTools\src</Filter>
+      <Filter>addons\ofxFlowTools\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\ftSwapFbo.h">
-      <Filter>ddons\ofxFlowTools\src</Filter>
+      <Filter>addons\ofxFlowTools\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\ofxFlowTools.h">
-      <Filter>ddons\ofxFlowTools\src</Filter>
+      <Filter>addons\ofxFlowTools\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\drawforces\ftDrawForce.h">
-      <Filter>ddons\ofxFlowTools\src\drawforces</Filter>
+      <Filter>addons\ofxFlowTools\src\drawforces</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\drawforces\ftDrawForceShader.h">
-      <Filter>ddons\ofxFlowTools\src\drawforces</Filter>
+      <Filter>addons\ofxFlowTools\src\drawforces</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\drawforces\ftDrawMouseForces.h">
-      <Filter>ddons\ofxFlowTools\src\drawforces</Filter>
+      <Filter>addons\ofxFlowTools\src\drawforces</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftAdvectShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftDiffuseShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftDivergenceShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftFluidSimulation.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftJacobiShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftSmokeBuoyancyShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftSubstractGradientShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftVorticityFirstPassShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\fluid\ftVorticitySecondPassShader.h">
-      <Filter>ddons\ofxFlowTools\src\fluid</Filter>
+      <Filter>addons\ofxFlowTools\src\fluid</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\mask\ftVelocityMask.h">
-      <Filter>ddons\ofxFlowTools\src\mask</Filter>
+      <Filter>addons\ofxFlowTools\src\mask</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\mask\ftVelocityMaskShader.h">
-      <Filter>ddons\ofxFlowTools\src\mask</Filter>
+      <Filter>addons\ofxFlowTools\src\mask</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\opticalflow\ftOpticalFlow.h">
-      <Filter>ddons\ofxFlowTools\src\opticalflow</Filter>
+      <Filter>addons\ofxFlowTools\src\opticalflow</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\opticalflow\ftOpticalFlowShader.h">
-      <Filter>ddons\ofxFlowTools\src\opticalflow</Filter>
+      <Filter>addons\ofxFlowTools\src\opticalflow</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\particles\ftAgeLifespanMassSizeParticleShader.h">
-      <Filter>ddons\ofxFlowTools\src\particles</Filter>
+      <Filter>addons\ofxFlowTools\src\particles</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\particles\ftDrawParticleShader.h">
-      <Filter>ddons\ofxFlowTools\src\particles</Filter>
+      <Filter>addons\ofxFlowTools\src\particles</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\particles\ftInitPositionShader.h">
-      <Filter>ddons\ofxFlowTools\src\particles</Filter>
+      <Filter>addons\ofxFlowTools\src\particles</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\particles\ftMoveParticleShader.h">
-      <Filter>ddons\ofxFlowTools\src\particles</Filter>
+      <Filter>addons\ofxFlowTools\src\particles</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\particles\ftParticleFlow.h">
-      <Filter>ddons\ofxFlowTools\src\particles</Filter>
+      <Filter>addons\ofxFlowTools\src\particles</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvAverage.h">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvDisplayScalar.h">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvDisplayScalarShader.h">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvField.h">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvFieldShader.h">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\splitvelocity\ftSvFromVelocityShader.h">
-      <Filter>ddons\ofxFlowTools\src\splitvelocity</Filter>
+      <Filter>addons\ofxFlowTools\src\splitvelocity</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftAddForceShader.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftAverageVelocity.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftClampLengthShader.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftDensityFloatMultiplier.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftDensityVec2Multiplier.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftEaseShader.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftNormalizationShader.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftRedToLuminanceShader.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftToScalar.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\tools\ftToScalarShader.h">
-      <Filter>ddons\ofxFlowTools\src\tools</Filter>
+      <Filter>addons\ofxFlowTools\src\tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftContrastShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftDecayShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftEOGShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftGaussianBlurShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftHSLShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftLuminanceShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\filters\ftTimeBlurShader.h">
-      <Filter>ddons\ofxFlowTools\src\filters</Filter>
+      <Filter>addons\ofxFlowTools\src\filters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftDisplayScalar.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftDisplayScalarShader.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftPressureField.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftPressureFieldShader.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftTemperatureField.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftTemperatureFieldShader.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftVelocityField.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftVelocityFieldShader.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftVelocitySpheres.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftVelocitySpheresShader.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftVTField.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxFlowTools\src\visualisation\ftVTFieldShader.h">
-      <Filter>ddons\ofxFlowTools\src\visualisation</Filter>
+      <Filter>addons\ofxFlowTools\src\visualisation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
-      <Filter>ddons\ofxGui\src</Filter>
+      <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\config.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_endian.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_errors.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_internal.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_lowlevel.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_macros.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_osc_types.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_throw.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_types.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\lo\lo_types_internal.h">
-      <Filter>pps\myApps\barim\lib\chuck\core\lo</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core\lo</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_absyn.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_carrier.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_compile.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_def.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_dl.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_emit.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_errmsg.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_frame.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_instr.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_io.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_lang.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_oo.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_otf.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_parse.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_scan.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_shell.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_stats.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_symbol.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_table.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_type.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_ugen.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_utils.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_vm.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\chuck_win32.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\dirent_win32.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\hidio_sdl.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\midiio_rtmidi.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\rtmidi.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\uana_extract.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\uana_xform.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ugen_filter.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ugen_osc.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ugen_stk.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ugen_xxx.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ulib_machine.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ulib_math.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ulib_opsc.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ulib_regex.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\ulib_std.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_buffers.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_console.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_hid.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_math.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_network.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_opsc.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_raw.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_serial.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_sndfile.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_string.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_thread.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\core\util_xforms.h">
-      <Filter>pps\myApps\barim\lib\chuck\core</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\core</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\host\RtAudio\RtAudio.h">
-      <Filter>pps\myApps\barim\lib\chuck\host\RtAudio</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
     </ClInclude>
     <ClInclude Include="lib\chuck\host\RtAudio\RtError.h">
-      <Filter>pps\myApps\barim\lib\chuck\host\RtAudio</Filter>
+      <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\background.frag">
+      <Filter>apps\myApps\barim\shaders</Filter>
+    </None>
+    <None Include="shaders\background.vert">
+      <Filter>apps\myApps\barim\shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
