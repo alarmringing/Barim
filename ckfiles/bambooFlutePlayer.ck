@@ -13,7 +13,6 @@ Flute flute => PoleZero f => JCRev r => dac;
 0.914347 => external float pressure;
 1 => external float vibratoFreq;
 0 => external float vibratoGain;
-play(note, 1);
 // infinite time-loop
 while( true )
 {
