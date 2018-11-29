@@ -560,6 +560,9 @@
     <ClCompile Include="lib\chuck\host\RtAudio\RtAudio.cpp">
       <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
     </ClCompile>
+    <ClCompile Include="src\Branch.cpp">
+      <Filter>apps\myApps\barim\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
@@ -1161,6 +1164,9 @@
     </ClInclude>
     <ClInclude Include="lib\chuck\host\RtAudio\RtError.h">
       <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Branch.h">
+      <Filter>apps\myApps\barim\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

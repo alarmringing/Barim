@@ -7,6 +7,8 @@
 #include "ofxKinectForWindows2.h"
 #include "ofxBox2d.h"
 
+#include "Branch.h"
+
 #define SAMPLE float
 #define MY_FORMAT RTAUDIO_FLOAT32
 #define MY_SRATE 44100
@@ -32,6 +34,7 @@ class ofApp : public ofBaseApp {
 public:
 	void setup();
 	void sporkNewChuckFile(string fileName);
+	void addBranch(float xPos);
 	bool isJointTrackingStable(JointType jointType);
 	void checkHeadGong();
 	void checkBothHandsOpen();
@@ -41,6 +44,7 @@ public:
 	void updateKinectData();
 	void update();
 	void drawBackground();
+	void drawWillow();
 	void draw();
 
 	void keyPressed(int key);
@@ -128,6 +132,10 @@ public:
 	ofxLabel fps;
 	ofFbo backgroundFbo;
 	ofShader backgroundShader;
-
 	float dayProgressionSpeed;
+
+	// Willow world
+	ofxBox2d box2d;
+	ofxBox2d willowWorld;
+	vector<shared_ptr<Branch>> branches;
 };

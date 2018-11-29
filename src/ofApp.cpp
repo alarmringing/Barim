@@ -17,12 +17,27 @@ void ofApp::setup(){
 
 	backgroundShader.load("shaders/background");
 	backgroundFbo.allocate(ofGetWidth(), ofGetHeight());
+	
+	box2d.init();
+	box2d.setGravity(0, 10);
+	box2d.setFPS(60.0);
+	box2d.registerGrabbing();
+	// Branch generation test
+	for (int i = 0; i < 5; i++) {
+		addBranch(ofRandom(ofGetWidth()));
+	}
 }
 
 void ofApp::sporkNewChuckFile(string pathName) {
 	string args = "";
 	myChuck->compileFile(pathName, args);
 	return;
+}
+
+void ofApp::addBranch(float xPos) {
+	int nodeNum = 8 + ofRandom(5);
+	shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -ofRandomf(), nodeNum));
+	branches.push_back(branch);
 }
 
 bool ofApp::isJointTrackingStable(JointType jointType) {
@@ -83,7 +98,7 @@ void ofApp::checkMaxHandHeight() {
 	}
 	if (currentMaxHandHeight > numeric_limits<float>::lowest()) maxHandHeight = currentMaxHandHeight;
 	
-	float fluteGainLerped = ofLerp(0.15, 1, ofClamp(currentMaxHandHeight, 0, 1));
+	float fluteGainLerped = ofLerp(0.05, 1, ofClamp(currentMaxHandHeight, 0, 1));
 	myChuck->setGlobalFloat("finalGain", fluteGainLerped);
 }
 
@@ -178,6 +193,7 @@ void ofApp::updateKinectData() {
 //--------------------------------------------------------------
 void ofApp::update() {
 	updateKinectData();
+	box2d.update();
 }
 
 //--------------------------------------------------------------
@@ -195,7 +211,12 @@ void ofApp::draw(){
 	//kinect.getColorSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//backgroundFbo.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
-	gui.draw();
+	gui.draw(); //draw GUI
+
+	//draw willow
+	for (int i = 0; i < branches.size(); i++) {
+		branches[i]->draw(ofColor(0, 0, 0, 1));
+	}
 }
 
 //--------------------------------------------------------------

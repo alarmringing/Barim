@@ -279,6 +279,7 @@ C:\Users\Jihee Hwang\Documents\of_v0.9.0_vs_release\addons\ofxFlowTools\src\visu
     <ClCompile Include="lib\chuck\core\util_thread.cpp" />
     <ClCompile Include="lib\chuck\core\util_xforms.c" />
     <ClCompile Include="lib\chuck\host\RtAudio\RtAudio.cpp" />
+    <ClCompile Include="src\Branch.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.cpp" />
@@ -419,6 +420,7 @@ C:\Users\Jihee Hwang\Documents\of_v0.9.0_vs_release\addons\ofxFlowTools\src\visu
     <ClInclude Include="lib\chuck\core\util_xforms.h" />
     <ClInclude Include="lib\chuck\host\RtAudio\RtAudio.h" />
     <ClInclude Include="lib\chuck\host\RtAudio\RtError.h" />
+    <ClInclude Include="src\Branch.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.h" />
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2dBaseShape.h" />
