@@ -6,7 +6,7 @@
 #include "ofxGui.h"
 #include "ofxKinectForWindows2.h"
 #include "ofxBox2d.h"
-//#include "ofxAssimpModelLoader.h"
+#include "ofxAssimpModelLoader.h"
 
 
 #include "Branch.h"
@@ -145,5 +145,5 @@ public:
 	vector<shared_ptr<Branch>> branches;
 
 	// Leaf
-	//ofxAssimpModelLoader leafModel;
+	ofxAssimpModelLoader leafModel;
 };

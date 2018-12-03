@@ -24,6 +24,8 @@ void ofApp::setup(){
 	box2d.registerGrabbing();
 
 	generateBranches();
+	leafModel.loadModel(LEAFPATH, true);
+	leafModel.setScale(5, 5, 5);
 }
 
 void ofApp::sporkNewChuckFile(string pathName) {
@@ -219,6 +221,7 @@ void ofApp::draw(){
 	for (int i = 0; i < branches.size(); i++) {
 		branches[i]->draw(ofColor(200, 200, 200, 255));
 	}
+	leafModel.drawFaces();
 }
 
 //--------------------------------------------------------------
