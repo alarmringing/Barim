@@ -6,6 +6,8 @@
 #include "ofxGui.h"
 #include "ofxKinectForWindows2.h"
 #include "ofxBox2d.h"
+//#include "ofxAssimpModelLoader.h"
+
 
 #include "Branch.h"
 
@@ -18,6 +20,7 @@
 
 #define GONGPATH "ckfiles/gongPlayer.ck"
 #define FLUTEPATH "ckfiles/bambooFlutePlayer.ck"
+#define LEAFPATH "models/leaf.obj"
 
 struct Flute {
 	double jetDelay;
@@ -40,6 +43,7 @@ public:
 	void checkBothHandsOpen();
 	void checkMaxHandHeight();
 	void checkHandSpeed();
+	void generateBranches();
 	void lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, float amt);
 	void updateKinectData();
 	void update();
@@ -137,5 +141,9 @@ public:
 	// Willow world
 	ofxBox2d box2d;
 	ofxBox2d willowWorld;
+	int numBranches = 40;
 	vector<shared_ptr<Branch>> branches;
+
+	// Leaf
+	//ofxAssimpModelLoader leafModel;
 };

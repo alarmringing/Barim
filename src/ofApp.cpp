@@ -22,10 +22,8 @@ void ofApp::setup(){
 	box2d.setGravity(0, 10);
 	box2d.setFPS(60.0);
 	box2d.registerGrabbing();
-	// Branch generation test
-	for (int i = 0; i < 5; i++) {
-		addBranch(ofRandom(ofGetWidth()));
-	}
+
+	generateBranches();
 }
 
 void ofApp::sporkNewChuckFile(string pathName) {
@@ -34,10 +32,13 @@ void ofApp::sporkNewChuckFile(string pathName) {
 	return;
 }
 
-void ofApp::addBranch(float xPos) {
-	int nodeNum = 8 + ofRandom(5);
-	shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -ofRandomf(), nodeNum));
-	branches.push_back(branch);
+void ofApp::generateBranches() {
+	for (int i = 0; i < numBranches; i++) {
+		float xPos = ofRandom(ofGetWidth());
+		int nodeNum = 15 + ofRandom(6);
+		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -5 - 3 * ofRandomf(), nodeNum));
+		branches.push_back(branch);
+	}
 }
 
 bool ofApp::isJointTrackingStable(JointType jointType) {
@@ -207,7 +208,8 @@ void ofApp::drawBackground() {
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	ofBackground(20, 20, 20, 255);
+	//kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//kinect.getColorSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//backgroundFbo.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
@@ -215,7 +217,7 @@ void ofApp::draw(){
 
 	//draw willow
 	for (int i = 0; i < branches.size(); i++) {
-		branches[i]->draw(ofColor(0, 0, 0, 1));
+		branches[i]->draw(ofColor(200, 200, 200, 255));
 	}
 }
 

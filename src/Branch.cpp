@@ -7,9 +7,9 @@ Branch::Branch(b2World *boxWorld, float x, float y, int nodeNum) {
 	// initialize the nodes
 	for (int i = 0; i < nodeNum; i++) {
 		shared_ptr<ofxBox2dCircle> circle = shared_ptr<ofxBox2dCircle>(new ofxBox2dCircle);
-		circle.get()->setPhysics(30.0, 0.0, 0.1);
+		circle.get()->setPhysics(0.001, 0.0, 10);
 		float xOffset = (ofRandomf() - 0.5) * 10;
-		circle.get()->setup(boxWorld, anchor.getPosition().x + xOffset, anchor.getPosition().y + (i + 1) * jointLength, 4);
+		circle.get()->setup(boxWorld, anchor.getPosition().x + xOffset, anchor.getPosition().y + (i + 1) * jointLength, 0.01);
 		nodes.push_back(circle);
 	}
 
@@ -17,6 +17,7 @@ Branch::Branch(b2World *boxWorld, float x, float y, int nodeNum) {
 	for (int i = 0; i< nodes.size(); i++) {
 
 		shared_ptr<ofxBox2dJoint> joint = shared_ptr<ofxBox2dJoint>(new ofxBox2dJoint);
+		joint->jointType = e_ropeJoint;
 
 		// if this is the first point connect to the top anchor.
 		if (i == 0) {
@@ -41,7 +42,7 @@ void Branch::draw(ofColor branchColor) {
 	}
 
 	for (int i = 0; i<joints.size(); i++) {
-		ofSetColor(ofColor(1, 0, 0, 1));
+		ofSetColor(branchColor);
 		joints[i].get()->draw();
 	}
 }
