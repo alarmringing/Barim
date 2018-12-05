@@ -20,7 +20,8 @@
 
 #define GONGPATH "ckfiles/gongPlayer.ck"
 #define FLUTEPATH "ckfiles/bambooFlutePlayer.ck"
-#define LEAFPATH "assets/leaf.obj"
+#define LEAF3DPATH "assets/leaf.obj"
+#define LEAF2DPATH "assets/strokeTransparent.png"
 #define PARTICLESETTINGPATH "particleSettings.xml"
 
 using namespace flowTools;
@@ -47,6 +48,7 @@ public:
 	void checkMaxHandHeight();
 	void checkHandSpeed();
 	void updateFlow();
+	void updateBranches();
 	void generateBranches();
 	void lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, float amt);
 	void updateKinectData();
@@ -79,6 +81,8 @@ public:
 	bool hasKinectStarted = false;
 	ofxKinectForWindows2::Data::Body previousBody;
 	ofxKinectForWindows2::Data::Body currentBody;
+	shared_ptr<ofxBox2dCircle> boxLeftHand;
+	shared_ptr<ofxBox2dCircle> boxRightHand;
 
 	// Head gong 
 	float lastGongTime = 0;
@@ -145,11 +149,12 @@ public:
 	// Willow world
 	ofxBox2d box2d;
 	ofxBox2d willowWorld;
-	int numBranches = 40;
+	int numBranches = 30;
 	vector<shared_ptr<Branch>> branches;
 
 	// Leaf
-	ofxAssimpModelLoader leafModel;
+	//ofxAssimpModelLoader leafModel;
+	ofImage leafImage;
 
 	// FlowTools
 	int	flowWidth;

@@ -21,8 +21,8 @@
 	</velocity_mask>
 	<fluid_solver>
 		<reset>0</reset>
-		<speed>9.69388</speed>
-		<cell_size>0.112245</cell_size>
+		<speed>29.0816</speed>
+		<cell_size>0.173469</cell_size>
 		<iterations>5</iterations>
 		<viscosity>0.1</viscosity>
 		<vorticity>1</vorticity>
@@ -34,8 +34,8 @@
 		</advanced_dissipation>
 		<smoke_buoyancy>
 			<sigma>0.05</sigma>
-			<weight>0.05</weight>
-			<ambient_temperature>0</ambient_temperature>
+			<weight>0.906414</weight>
+			<ambient_temperature>1</ambient_temperature>
 			<gravity>0, 9.80665</gravity>
 		</smoke_buoyancy>
 		<maximum>
@@ -49,15 +49,15 @@
 	</fluid_solver>
 	<particle_flow>
 		<active>1</active>
-		<speed>9.69388</speed>
-		<cell_size>0.112245</cell_size>
+		<speed>29.0816</speed>
+		<cell_size>0.173469</cell_size>
 		<birth_chance>0.137755</birth_chance>
 		<birth_velocity_chance>0.5</birth_velocity_chance>
 		<lifespan>3.52041</lifespan>
 		<lifespan_spread>0.25</lifespan_spread>
 		<mass>0.989796</mass>
 		<mass_spread>0.112245</mass_spread>
-		<size>7.55102</size>
+		<size>1.32653</size>
 		<size_spread>0.229592</size_spread>
 		<twinkle_speed>11</twinkle_speed>
 		<gravity>0, 9.80665</gravity>

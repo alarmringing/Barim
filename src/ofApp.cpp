@@ -21,11 +21,18 @@ void ofApp::setup(){
 	box2d.setGravity(0, 10);
 	box2d.setFPS(60.0);
 	box2d.registerGrabbing();
+	boxLeftHand = shared_ptr<ofxBox2dCircle>(new ofxBox2dCircle);
+	boxLeftHand.get()->setPhysics(5, 0.0, 5);
+	boxLeftHand.get()->setup(box2d.world, 0, 0, 32.0);
+	boxRightHand = shared_ptr<ofxBox2dCircle>(new ofxBox2dCircle);
+	boxRightHand.get()->setPhysics(5, 0.0, 5);
+	boxRightHand.get()->setup(box2d.world, 0, 0, 32.0);
 
 	// branches
 	generateBranches();
-	leafModel.loadModel(LEAFPATH, true);
-	leafModel.setScale(5, 5, 5);
+	//leafModel.loadModel(LEAFPATH, true);
+	//leafModel.setScale(5, 5, 5);
+	leafImage.load(LEAF2DPATH);
 
 	// Flow tools
 	flowWidth = ofGetWidth() / 4;
@@ -139,6 +146,11 @@ void ofApp::lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, floa
 void ofApp::checkHandSpeed() {
 	float speedSum = 0;
 	if (isJointTrackingStable(JointType_HandRight)) {
+		ofVec2f projectedPos = currentBody.joints[JointType_HandRight].getPositionInDepthMap();
+		projectedPos.x = projectedPos.x / kinect.getDepthSource().get()->getWidth() * ofGetWidth();
+		projectedPos.y = projectedPos.y / kinect.getDepthSource().get()->getHeight() * ofGetHeight();
+		boxRightHand.get()->setPosition(projectedPos);
+
 		float currentSpeed =
 			(currentBody.joints[JointType_HandRight].getPosition() 
 				- previousBody.joints[JointType_HandRight].getPosition()).length();
@@ -149,6 +161,11 @@ void ofApp::checkHandSpeed() {
 		speedSum += rightHandPreviousSpeed;
 	}
 	if (isJointTrackingStable(JointType_HandLeft)) {
+		ofVec2f projectedPos = currentBody.joints[JointType_HandLeft].getPositionInDepthMap();
+		projectedPos.x = projectedPos.x / kinect.getDepthSource().get()->getWidth() * ofGetWidth();
+		projectedPos.y = projectedPos.y / kinect.getDepthSource().get()->getHeight() * ofGetHeight();
+		boxLeftHand.get()->setPosition(projectedPos);
+
 		float currentSpeed =
 			(currentBody.joints[JointType_HandLeft].getPosition()
 				- previousBody.joints[JointType_HandLeft].getPosition()).length();
@@ -193,13 +210,17 @@ void ofApp::updateFlow() {
 	particleFlow.update();
 }
 
+void ofApp::updateBranches() {
+
+}
+
 void ofApp::updateKinectData() {
-	kinect.update();
-	//Getting joint positions (skeleton tracking)
+	kinect.update(); // Update early to not feed into ofxFlowTools when there's no body recognition.
 	vector<ofxKinectForWindows2::Data::Body> bodies = kinect.getBodySource()->getBodies();
-	if (bodies.size() < 1) return; // Return if no human in scene or kinect is not working.
+	if (!kinect.getBodySource()->isFrameNew()) return; // Return if no human in scene or kinect is not working.
 
 	updateFlow();
+	updateBranches();
 
 	for (Data::Body body : bodies) {
 		if (body.tracked) {
@@ -264,8 +285,7 @@ void ofApp::draw(){
 	//kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//kinect.getColorSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//backgroundFbo.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
-	kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
-	gui.draw(); //draw GUI
+	//kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
 
 	ofPushStyle();
 	ofSetColor(ofColor(200, 200, 200, 255));
@@ -276,9 +296,10 @@ void ofApp::draw(){
 
 	//draw willow
 	for (int i = 0; i < branches.size(); i++) {
-		branches[i]->draw(ofColor(200, 200, 200, 255));
+		branches[i]->draw(ofColor(200, 200, 200, 255), leafImage);
 	}
-	leafModel.drawFaces();
+
+	gui.draw();
 }
 
 //--------------------------------------------------------------
