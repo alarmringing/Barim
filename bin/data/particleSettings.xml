@@ -1,0 +1,66 @@
+<particleSettings>
+	<fps>60</fps>
+	<optical_flow>
+		<strength>10</strength>
+		<offset>3</offset>
+		<lambda>0.01</lambda>
+		<threshold>0.02</threshold>
+		<inverse_x>0</inverse_x>
+		<inverse_y>0</inverse_y>
+		<time_decay_blur>
+			<decay>3</decay>
+			<blur_radius>3</blur_radius>
+		</time_decay_blur>
+	</optical_flow>
+	<velocity_mask>
+		<strength>2.5</strength>
+		<hue>0</hue>
+		<saturation>3</saturation>
+		<blur_passes>3</blur_passes>
+		<blur_radius>5</blur_radius>
+	</velocity_mask>
+	<fluid_solver>
+		<reset>0</reset>
+		<speed>9.69388</speed>
+		<cell_size>0.112245</cell_size>
+		<iterations>5</iterations>
+		<viscosity>0.1</viscosity>
+		<vorticity>1</vorticity>
+		<dissipation>0.01</dissipation>
+		<advanced_dissipation>
+			<velocity_offset>-0.001</velocity_offset>
+			<density_offset>0</density_offset>
+			<temperature_offset>0.005</temperature_offset>
+		</advanced_dissipation>
+		<smoke_buoyancy>
+			<sigma>0.05</sigma>
+			<weight>0.05</weight>
+			<ambient_temperature>0</ambient_temperature>
+			<gravity>0, 9.80665</gravity>
+		</smoke_buoyancy>
+		<maximum>
+			<clampForce>0.05</clampForce>
+			<density>2</density>
+			<velocity>4</velocity>
+			<temperature>2</temperature>
+		</maximum>
+		<density_from_pressure>0</density_from_pressure>
+		<density_from_vorticity>-0.1</density_from_vorticity>
+	</fluid_solver>
+	<particle_flow>
+		<active>1</active>
+		<speed>9.69388</speed>
+		<cell_size>0.112245</cell_size>
+		<birth_chance>0.137755</birth_chance>
+		<birth_velocity_chance>0.5</birth_velocity_chance>
+		<lifespan>3.52041</lifespan>
+		<lifespan_spread>0.25</lifespan_spread>
+		<mass>0.989796</mass>
+		<mass_spread>0.112245</mass_spread>
+		<size>7.55102</size>
+		<size_spread>0.229592</size_spread>
+		<twinkle_speed>11</twinkle_speed>
+		<gravity>0, 9.80665</gravity>
+	</particle_flow>
+<particleSettings/>
+</particleSettings>
