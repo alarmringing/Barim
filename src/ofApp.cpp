@@ -22,11 +22,11 @@ void ofApp::setup(){
 	box2d.setFPS(60.0);
 	box2d.registerGrabbing();
 	boxLeftHand = shared_ptr<ofxBox2dCircle>(new ofxBox2dCircle);
-	boxLeftHand.get()->setPhysics(5, 0.0, 5);
-	boxLeftHand.get()->setup(box2d.world, 0, 0, 32.0);
+	boxLeftHand.get()->setPhysics(0.001, 0.0, 5);
+	boxLeftHand.get()->setup(box2d.world, 0, 0, handSize);
 	boxRightHand = shared_ptr<ofxBox2dCircle>(new ofxBox2dCircle);
-	boxRightHand.get()->setPhysics(5, 0.0, 5);
-	boxRightHand.get()->setup(box2d.world, 0, 0, 32.0);
+	boxRightHand.get()->setPhysics(0.001, 0.0, 5);
+	boxRightHand.get()->setup(box2d.world, 0, 0, handSize);
 
 	// branches
 	generateBranches();
@@ -65,7 +65,7 @@ void ofApp::sporkNewChuckFile(string pathName) {
 void ofApp::generateBranches() {
 	for (int i = 0; i < numBranches; i++) {
 		float xPos = ofRandom(ofGetWidth());
-		int nodeNum = 15 + ofRandom(6);
+		int nodeNum = 15 + ofRandom(10);
 		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -5 - 3 * ofRandomf(), nodeNum));
 		branches.push_back(branch);
 	}

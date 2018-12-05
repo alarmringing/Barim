@@ -14,7 +14,7 @@ public:
 	ofxBox2dCircle anchor;
 	vector<shared_ptr<ofxBox2dCircle>> nodes; //default box2d circles
 	vector<shared_ptr<ofxBox2dJoint>> branchJoints; //between nodes
-	float jointLength = 13;
-	float leafSize = 15;
+	float jointLength = 8;
+	float leafSize = 18;
 };
 

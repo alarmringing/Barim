@@ -83,6 +83,7 @@ public:
 	ofxKinectForWindows2::Data::Body currentBody;
 	shared_ptr<ofxBox2dCircle> boxLeftHand;
 	shared_ptr<ofxBox2dCircle> boxRightHand;
+	float handSize = 25;
 
 	// Head gong 
 	float lastGongTime = 0;
