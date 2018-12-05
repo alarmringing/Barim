@@ -7,25 +7,46 @@ using namespace ofxKinectForWindows2;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	// Kinect Setup
 	kinect.open();
 	kinect.initDepthSource();
 	kinect.initBodySource();
 	kinect.initBodyIndexSource();
 
-	gui.setup();
-	gui.add(fps.setup("fps", ofToString(ofGetFrameRate())));
-
 	backgroundShader.load("shaders/background");
 	backgroundFbo.allocate(ofGetWidth(), ofGetHeight());
 	
+	// physics
 	box2d.init();
 	box2d.setGravity(0, 10);
 	box2d.setFPS(60.0);
 	box2d.registerGrabbing();
 
+	// branches
 	generateBranches();
 	leafModel.loadModel(LEAFPATH, true);
 	leafModel.setScale(5, 5, 5);
+
+	// Flow tools
+	flowWidth = ofGetWidth() / 4;
+	flowHeight = ofGetHeight() / 4;
+	flowInputFbo.allocate(ofGetWidth(), ofGetHeight());
+	flowInputFbo.black();
+	opticalFlow.setup(flowWidth, flowHeight);
+	velocityMask.setup(ofGetWidth(), ofGetHeight());
+	fluidSimulation.setup(flowWidth, flowHeight, ofGetWidth(), ofGetHeight());
+	particleFlow.setup(flowWidth, flowHeight, ofGetWidth(), ofGetHeight());
+
+	// GUI Setup
+	gui.setup("particleSettings", PARTICLESETTINGPATH);
+	gui.add(fps.setup("fps", ofToString(ofGetFrameRate())));
+	gui.add(opticalFlow.parameters);
+	gui.add(velocityMask.parameters);
+	gui.add(fluidSimulation.parameters);
+	gui.add(particleFlow.parameters);
+	// if the settings file is not present the parameters will not be set during this setup
+	if (!ofFile(PARTICLESETTINGPATH)) gui.saveToFile(PARTICLESETTINGPATH);
+	gui.loadFromFile(PARTICLESETTINGPATH);
 }
 
 void ofApp::sporkNewChuckFile(string pathName) {
@@ -115,7 +136,6 @@ void ofApp::lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, floa
 	myChuck->setGlobalFloat("vibratoGain", ofLerp(firstFlute.vibratoGain, secondFlute.vibratoGain, amt));
 }
 
-
 void ofApp::checkHandSpeed() {
 	float speedSum = 0;
 	if (isJointTrackingStable(JointType_HandRight)) {
@@ -144,12 +164,42 @@ void ofApp::checkHandSpeed() {
 	//lerpBtwFluteParamsAndWrite(noisyFlute, notNoisyFlute, breathLerpAmount);
 }
 
+void ofApp::updateFlow() {
+	ofPushStyle();
+	ofEnableBlendMode(OF_BLENDMODE_DISABLED);
+	flowInputFbo.begin();
+	kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	flowInputFbo.end();
+	ofPopStyle();
+
+	opticalFlow.setSource(flowInputFbo.getTexture());
+	opticalFlow.update();
+
+	velocityMask.setDensity(flowInputFbo.getTexture());
+	velocityMask.setVelocity(opticalFlow.getOpticalFlow());
+	velocityMask.update(); 
+	
+	fluidSimulation.addVelocity(opticalFlow.getOpticalFlowDecay());
+	fluidSimulation.addDensity(velocityMask.getColorMask());
+	fluidSimulation.addTemperature(velocityMask.getLuminanceMask());
+	fluidSimulation.update();
+
+	// ParticleFlow is dependent on: opticalFlow, fluidSimulation (Dependent on opticalFlow and velocitymask)
+	particleFlow.setSpeed(fluidSimulation.getSpeed());
+	particleFlow.setCellSize(fluidSimulation.getCellSize());
+	particleFlow.addFlowVelocity(opticalFlow.getOpticalFlow());
+	particleFlow.addFluidVelocity(fluidSimulation.getVelocity());
+	particleFlow.setObstacle(fluidSimulation.getObstacle());
+	particleFlow.update();
+}
+
 void ofApp::updateKinectData() {
 	kinect.update();
-
 	//Getting joint positions (skeleton tracking)
 	vector<ofxKinectForWindows2::Data::Body> bodies = kinect.getBodySource()->getBodies();
-	if (bodies.size() < 1) return; // Return if no human in scene.
+	if (bodies.size() < 1) return; // Return if no human in scene or kinect is not working.
+
+	updateFlow();
 
 	for (Data::Body body : bodies) {
 		if (body.tracked) {
@@ -216,6 +266,13 @@ void ofApp::draw(){
 	//backgroundFbo.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
 	gui.draw(); //draw GUI
+
+	ofPushStyle();
+	ofSetColor(ofColor(200, 200, 200, 255));
+	ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+	if (particleFlow.isActive())
+		particleFlow.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	ofPopStyle();
 
 	//draw willow
 	for (int i = 0; i < branches.size(); i++) {

@@ -32,6 +32,15 @@ Branch::Branch(b2World *boxWorld, float x, float y, int nodeNum) {
 	}
 }
 
+void Branch::updateWind(ofTexture &flowVelocityTexture, ofFloatPixels &flowVelocityPixels) {
+	for (int i = 0; i < nodes.size(); i++) {
+		ofVec2f coordInTex = flowVelocityTexture.getCoordFromPoint(nodes[i].get()->getPosition.x, nodes[i].get()->getPosition.y);
+		ofColor texVal = flowVelocityPixels.getColor(coordInTex.x, coordInTex.y);
+		ofVec2f windVelocity = ofVec2f(texVal.r, texVal.g);
+		cout << "windVelocity looking like " << windVelocity.x << ", " << windVelocity.y << endl;
+	}
+}
+
 void Branch::draw(ofColor branchColor) {
 	ofSetColor(branchColor);
 	anchor.draw();

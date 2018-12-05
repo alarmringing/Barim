@@ -6,6 +6,7 @@ class Branch {
 public:
 	Branch(b2World *boxWorld, float x, float y, int nodeNum);
 	void draw(ofColor branchColor);
+	void updateWind(ofTexture &flowVelocityTexture, ofFloatPixels &flowVelocityPixels);
 	~Branch();
 
 	ofxBox2dCircle anchor;

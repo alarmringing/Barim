@@ -7,7 +7,7 @@
 #include "ofxKinectForWindows2.h"
 #include "ofxBox2d.h"
 #include "ofxAssimpModelLoader.h"
-
+#include "ofxFlowTools.h"
 
 #include "Branch.h"
 
@@ -20,7 +20,10 @@
 
 #define GONGPATH "ckfiles/gongPlayer.ck"
 #define FLUTEPATH "ckfiles/bambooFlutePlayer.ck"
-#define LEAFPATH "models/leaf.obj"
+#define LEAFPATH "assets/leaf.obj"
+#define PARTICLESETTINGPATH "particleSettings.xml"
+
+using namespace flowTools;
 
 struct Flute {
 	double jetDelay;
@@ -43,6 +46,7 @@ public:
 	void checkBothHandsOpen();
 	void checkMaxHandHeight();
 	void checkHandSpeed();
+	void updateFlow();
 	void generateBranches();
 	void lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, float amt);
 	void updateKinectData();
@@ -146,4 +150,14 @@ public:
 
 	// Leaf
 	ofxAssimpModelLoader leafModel;
+
+	// FlowTools
+	int	flowWidth;
+	int	flowHeight;
+
+	ftFbo flowInputFbo;
+	ftOpticalFlow opticalFlow;
+	ftVelocityMask velocityMask;
+	ftFluidSimulation fluidSimulation;
+	ftParticleFlow particleFlow;
 };
