@@ -44,6 +44,9 @@ void ofApp::setup(){
 	fluidSimulation.setup(flowWidth, flowHeight, ofGetWidth(), ofGetHeight());
 	particleFlow.setup(flowWidth, flowHeight, ofGetWidth(), ofGetHeight());
 
+	// Other aesthetics
+	sunImage.load(SUNPATH);
+
 	// GUI Setup
 	gui.setup("particleSettings", PARTICLESETTINGPATH);
 	gui.add(fps.setup("fps", ofToString(ofGetFrameRate())));
@@ -66,7 +69,7 @@ void ofApp::generateBranches() {
 	for (int i = 0; i < numBranches; i++) {
 		float xPos = ofRandom(ofGetWidth());
 		int nodeNum = 15 + ofRandom(10);
-		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -5 - 3 * ofRandomf(), nodeNum));
+		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -5 - 3 * ofRandomf(), nodeNum, myChuck));
 		branches.push_back(branch);
 	}
 }
@@ -87,6 +90,7 @@ void ofApp::checkHeadGong() {
 			currentHeadJoint.getTrackingState() == TrackingState_Tracked) {
 		sporkNewChuckFile(GONGPATH);
 		lastGongTime = ofGetElapsedTimef();
+		sunAlpha = 200;
 	}
 }
 
@@ -286,6 +290,13 @@ void ofApp::draw(){
 	//kinect.getColorSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//backgroundFbo.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
+
+	ofPushStyle();
+	ofSetColor(ofColor(248, 65, 36, sunAlpha));
+	if (sunAlpha > 0) sunAlpha = sunAlpha - sunFadeRate * ofGetLastFrameTime();
+	ofSetCircleResolution(60);
+	ofDrawCircle(ofGetWindowWidth() / 2 - sunSize / 2, ofGetWindowHeight() * 1 / 3 - sunSize / 2, sunSize);
+	ofPopStyle();
 
 	ofPushStyle();
 	ofSetColor(ofColor(200, 200, 200, 255));

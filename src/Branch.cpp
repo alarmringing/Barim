@@ -1,7 +1,8 @@
 #include "Branch.h"
 
-Branch::Branch(b2World *boxWorldRef, float x, float y, int nodeNum) {
+Branch::Branch(b2World *boxWorldRef, float x, float y, int nodeNum, ChucK *chuck) {
 	boxWorld = boxWorldRef;
+	myChuck = chuck;
 	anchor.setup(boxWorld, x, y, 4);
 
 	// initialize the nodes
@@ -19,10 +20,7 @@ Branch::Branch(b2World *boxWorldRef, float x, float y, int nodeNum) {
 void Branch::linkNodes() {
 	// now connect each node with a joint
 	for (int i = 0; i< nodes.size(); i++) {
-
 		shared_ptr<ofxBox2dJoint> joint = shared_ptr<ofxBox2dJoint>(new ofxBox2dJoint);
-		//joint->setDamping(300);
-		//joint->setFrequency(0.01);
 
 		// if this is the first point connect to the top anchor.
 		if (i == 0) {
@@ -36,19 +34,23 @@ void Branch::linkNodes() {
 	}
 }
 
+void Branch::bellAngleTest(angleDeg) {
+	//if (angleDeg > )
+}
+
 void Branch::draw(ofColor branchColor, ofImage &leafImage) {
 	ofSetColor(branchColor);
 	anchor.draw();
 	for (int i = 0; i < nodes.size() - 1; i++) {
 		ofFill();
+		ofVec2f bodyA = nodes[i].get()->getPosition();
+		ofVec2f bodyB = nodes[i + 1].get()->getPosition();
+		ofVec2f vector = bodyB - bodyA;
+		float angleDeg = PI - ofRadToDeg(atan2(vector.x, vector.y));
 	
 		ofPushMatrix();
-		ofVec2f bodyA = nodes[i].get()->getPosition();
-		ofVec2f bodyB = nodes[i+1].get()->getPosition();
-		ofVec2f vector = bodyB - bodyA;
-		float theta = atan2(vector.x, vector.y);
 		ofTranslate(bodyA.middle(bodyB).x, bodyA.middle(bodyB).y, 0);
-		ofRotate(PI - ofRadToDeg(theta));
+		ofRotate(angleDeg);
 		leafImage.setAnchorPercent(0.5, 0.5);
 		leafImage.draw(0, 0, leafSize, leafSize);
 		ofPopMatrix();

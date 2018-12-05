@@ -20,7 +20,7 @@
 
 #define GONGPATH "ckfiles/gongPlayer.ck"
 #define FLUTEPATH "ckfiles/bambooFlutePlayer.ck"
-#define LEAF3DPATH "assets/leaf.obj"
+#define SUNPATH "assets/sun.png"
 #define LEAF2DPATH "assets/strokeTransparent.png"
 #define PARTICLESETTINGPATH "particleSettings.xml"
 
@@ -89,6 +89,11 @@ public:
 	float lastGongTime = 0;
 	float gongMinInterval = 0.5;
 	float gongTriggerVelocity = -0.7;
+	// sun
+	float sunFadeRate = 30;
+	float sunAlpha = 0.0f;
+	float sunSize = 200;
+	ofImage sunImage;
 
 	// Hand open check
 	int noteOptions[5] = { 61, 63, 66, 68, 70 };
