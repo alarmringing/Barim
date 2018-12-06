@@ -2,12 +2,15 @@
 #include "ofxBox2d.h"
 #include "chuck.h"
 
+#define WINDBELLPATH "ckfiles/windbellPlayer.ck"
+
 class Branch {
 
 public:
 	Branch(b2World * boxWorldRef, float x, float y, int nodeNum, ChucK * chuck);
 	void linkNodes();
-	void bellAngleTest(float angleDeg);
+	void bellAngleTest(float averageAngle, float averageXVelocity);
+	void bellAngleTest(ofVec2f angleDeg);
 	void draw(ofColor branchColor, ofImage &leafImage);
 	~Branch();
 
@@ -18,5 +21,10 @@ public:
 	vector<shared_ptr<ofxBox2dJoint>> branchJoints; //between nodes
 	float jointLength = 8;
 	float leafSize = 18;
+
+	float lastWindbellTime;
+	float windbellMinInterval = 0.2;
+	float maxXVelocityThreshold = 0.02;
+	float minAngleThreshold = 10;
 };
 

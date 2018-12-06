@@ -310,6 +310,12 @@ void ofApp::draw(){
 		branches[i]->draw(ofColor(200, 200, 200, 255), leafImage);
 	}
 
+	// Presentation (body tracking)
+	float w = 270;
+	float h = 180;
+	kinect.getBodyIndexSource()->draw(ofGetWindowWidth() - w, ofGetWindowHeight() - h, w, h);
+
+
 	gui.draw();
 }
 
