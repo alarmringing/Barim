@@ -100,7 +100,7 @@ public:
 	int currentNoteIndex = 0;
 	float lastLeftHandOpenTime;
 	float lastRightHandOpenTime;
-	float handOpenDelayLimit = 0.2;
+	float handOpenDelayLimit = 0.5;
 
 	// Hand height
 	float maxHandHeight;

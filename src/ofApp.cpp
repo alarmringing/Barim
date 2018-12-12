@@ -96,12 +96,10 @@ void ofApp::checkHeadGong() {
 
 void ofApp::checkBothHandsOpen() {
 	// Because humans are slower than kinect's fps, account for duration by first storing when each hand was last opened.
-	if ((previousBody.rightHandState == HandState_Closed || previousBody.rightHandState == HandState_Unknown)
-			&& currentBody.rightHandState == HandState_Open) {
+	if (previousBody.rightHandState == HandState_Closed && currentBody.rightHandState == HandState_Open) {
 		lastRightHandOpenTime = ofGetElapsedTimef();
 	}
-	if ((previousBody.leftHandState == HandState_Closed || previousBody.leftHandState == HandState_Unknown)
-			&& currentBody.leftHandState == HandState_Open) {
+	if (previousBody.leftHandState == HandState_Closed && currentBody.leftHandState == HandState_Open) {
 		lastLeftHandOpenTime = ofGetElapsedTimef();
 	}
 	// Both hands are open now, and both hands were opened within x seconds.
