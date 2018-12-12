@@ -1,11 +1,25 @@
-"../audio/windbell.wav" => string fileName;
-me.sourceDir() + fileName => string filePath;
-SndBuf buf => dac;
-filePath => buf.read;
-0.8 => external float gain;
-0.9 => external float rate;
+fun void flute(float gain, float rate) {
+    "../audio/windbell.wav" => string fileName;
+    me.sourceDir() + fileName => string filePath;
+    SndBuf buf => dac;
+    filePath => buf.read;
+    gain => buf.gain;
+    rate => buf.rate;
+    
+    5::second => now;
+}
 
-gain => buf.gain;
-rate => buf.rate;
+0.8 => float gain;
+0.9 => float rate;
+flute(Std.atof(me.arg(0)), Std.atof(me.arg(1)));
 
-2::second => now;
+/*
+    "../audio/windbell.wav" => string fileName;
+    me.sourceDir() + fileName => string filePath;
+    SndBuf buf => dac;
+    filePath => buf.read;
+    gain => buf.gain;
+    rate => buf.rate;
+
+    5::second => now;
+*/

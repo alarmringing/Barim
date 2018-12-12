@@ -35,15 +35,15 @@ void Branch::linkNodes() {
 }
 
 void Branch::bellAngleTest(float averageAngle, float averageXVelocity) {
-	
+	// Quit condition
 	if (abs(averageXVelocity) > maxXVelocityThreshold
 		|| abs(averageAngle) < minAngleThreshold
 		|| ofGetElapsedTimef() - lastWindbellTime < windbellMinInterval) return;
 
-	float bellHitIntensity = 0.2 * (abs(minAngleThreshold) / minAngleThreshold);
-	string args = "";
-	myChuck->setGlobalFloat("gain", bellHitIntensity);
-	myChuck->setGlobalFloat("rate", 0.3 + ofRandomf() * 0.5);
+	float bellHitIntensity = 0.04 * pow((abs(averageAngle) / minAngleThreshold), 1.8);
+	float rate = 0.5 + ofRandomf() * 0.02;
+
+	string args = to_string(bellHitIntensity) + ":" + to_string(rate);
 	myChuck->compileFile(WINDBELLPATH, args);
 	lastWindbellTime = ofGetElapsedTimef();
 }
@@ -70,13 +70,6 @@ void Branch::draw(ofColor branchColor, ofImage &leafImage) {
 		ofPopMatrix();		
 	}
 	bellAngleTest(averageAngle, averageXVelocity);
-	/*
-	for (int i = 0; i< leaves.size(); i++) {
-		ofxBox2dRect *leaf = leaves[i].get();
-		leafImage.rotate90(leaf->getRotation());
-		leafImage.draw(leaf->getPosition().x - leaf->getWidth() / 2, leaf->getPosition().y - leaf->getHeight() / 2, leaf->getWidth(), leaf->getHeight());
-	}*/
-
 	for (int i = 0; i< branchJoints.size(); i++) {
 		ofSetColor(branchColor);
 		ofxBox2dJoint *branch = branchJoints[i].get();
