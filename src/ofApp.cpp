@@ -94,7 +94,31 @@ void ofApp::checkHeadGong() {
 	}
 }
 
-void ofApp::checkBothHandsOpen() {
+Flute ofApp::lerpNewFlute(Flute firstFlute, Flute secondFlute, float amt) {
+	Flute newFlute = Flute();
+	newFlute.jetDelay = ofLerp(firstFlute.jetDelay, secondFlute.jetDelay, amt);
+	newFlute.jetReflection = ofLerp(firstFlute.jetReflection, secondFlute.jetReflection, amt);
+	newFlute.endReflection = ofLerp(firstFlute.endReflection, secondFlute.endReflection, amt);
+	newFlute.noiseGain = ofLerp(firstFlute.noiseGain, secondFlute.noiseGain, amt);
+	newFlute.pressure = ofLerp(firstFlute.pressure, secondFlute.pressure, amt);
+	newFlute.vibratoFreq = ofLerp(firstFlute.vibratoFreq, secondFlute.vibratoFreq, amt);
+	newFlute.vibratoGain = ofLerp(firstFlute.vibratoGain, secondFlute.vibratoGain, amt);
+	newFlute.finalGain = ofLerp(firstFlute.finalGain, secondFlute.finalGain, amt);
+	return newFlute;
+}
+
+void ofApp::updateFluteInChuck(Flute flute) {
+	myChuck->setGlobalFloat("jetDelay", flute.jetDelay);
+	myChuck->setGlobalFloat("jetReflection", flute.jetReflection);
+	myChuck->setGlobalFloat("endReflection", flute.endReflection);
+	myChuck->setGlobalFloat("noiseGain", flute.noiseGain);
+	myChuck->setGlobalFloat("pressure", flute.pressure);
+	myChuck->setGlobalFloat("vibratoFreq", flute.vibratoFreq);
+	myChuck->setGlobalFloat("vibratoGain", flute.vibratoGain);
+	myChuck->setGlobalFloat("finalGain", flute.finalGain);
+}
+
+bool ofApp::didBothHandsOpen() {
 	// Because humans are slower than kinect's fps, account for duration by first storing when each hand was last opened.
 	if (previousBody.rightHandState == HandState_Closed && currentBody.rightHandState == HandState_Open) {
 		lastRightHandOpenTime = ofGetElapsedTimef();
@@ -104,22 +128,18 @@ void ofApp::checkBothHandsOpen() {
 	}
 	// Both hands are open now, and both hands were opened within x seconds.
 	if ((currentBody.rightHandState == HandState_Open && currentBody.leftHandState == HandState_Open)
-		&& ofGetElapsedTimef() - lastRightHandOpenTime < handOpenDelayLimit 
+		&& ofGetElapsedTimef() - lastRightHandOpenTime < handOpenDelayLimit
 		&& ofGetElapsedTimef() - lastLeftHandOpenTime < handOpenDelayLimit) {
-		
-		int randomInt;
-		do {
-			randomInt = ofRandom(size(noteOptions));
-		} while (randomInt == currentNoteIndex);
-		myChuck->setGlobalInt("note", noteOptions[randomInt]); // Change note.
-		currentNoteIndex = randomInt;
 
 		lastRightHandOpenTime = 0;
 		lastLeftHandOpenTime = 0;
+
+		return true;
 	}
+	return false;
 }
 
-void ofApp::checkMaxHandHeight() {
+float ofApp::getMaxHandHeight() {
 	float currentMaxHandHeight = numeric_limits<float>().lowest();
 	if (isJointTrackingStable(JointType_HandRight) 
 			&& currentBody.joints[JointType_HandRight].getPosition().y > currentMaxHandHeight) {
@@ -131,22 +151,29 @@ void ofApp::checkMaxHandHeight() {
 	}
 	if (currentMaxHandHeight > numeric_limits<float>::lowest()) maxHandHeight = currentMaxHandHeight;
 	
-	float fluteGainLerped = ofLerp(0.05, 1, ofClamp(currentMaxHandHeight, 0, 1));
-	myChuck->setGlobalFloat("finalGain", fluteGainLerped);
+	return ofLerp(0.05, 1, ofClamp(currentMaxHandHeight, 0, 0.4));
 }
 
-void ofApp::lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, float amt) {
-	myChuck->setGlobalFloat("jetDelay", ofLerp(firstFlute.jetDelay, secondFlute.jetDelay, amt));
-	myChuck->setGlobalFloat("jetReflection", ofLerp(firstFlute.jetReflection, secondFlute.jetReflection, amt));
-	myChuck->setGlobalFloat("endReflection", ofLerp(firstFlute.endReflection, secondFlute.endReflection, amt));
-	myChuck->setGlobalFloat("noiseGain", ofLerp(firstFlute.noiseGain, secondFlute.noiseGain, amt));
-	myChuck->setGlobalFloat("pressure", ofLerp(firstFlute.pressure, secondFlute.pressure, amt));
-	myChuck->setGlobalFloat("vibratoFreq", ofLerp(firstFlute.vibratoFreq, secondFlute.vibratoFreq, amt));
-	myChuck->setGlobalFloat("vibratoGain", ofLerp(firstFlute.vibratoGain, secondFlute.vibratoGain, amt));
+float ofApp::getMaxHandFront() {
+	float currentMaxHandFront = numeric_limits<float>().lowest();
+	if (isJointTrackingStable(JointType_HandRight)
+		&& currentBody.joints[JointType_HandRight].getPosition().z > currentMaxHandFront) {
+		currentMaxHandFront = currentBody.joints[JointType_HandRight].getPosition().z;
+	}
+	if (isJointTrackingStable(JointType_HandLeft)
+		&& currentBody.joints[JointType_HandLeft].getPosition().z > currentMaxHandFront) {
+		currentMaxHandFront = currentBody.joints[JointType_HandLeft].getPosition().z;
+	}
+	if (currentMaxHandFront > numeric_limits<float>::lowest()) maxHandFront = currentMaxHandFront;
+	// z is typically 1 at closest, 0.5 at furthest. we want it to be 0 at closest and 1 at furthest.
+	float lerpAmt = ofClamp((1 - ofClamp(currentMaxHandFront, 0, 1)) * 2, 0, 1);
+
+	return lerpAmt;
 }
 
-void ofApp::checkHandSpeed() {
-	float speedSum = 0;
+float ofApp::getHandSpeed() {
+	float leftSpeed = 0;
+	float rightSpeed = 0;
 	if (isJointTrackingStable(JointType_HandRight)) {
 		ofVec2f projectedPos = currentBody.joints[JointType_HandRight].getPositionInDepthMap();
 		projectedPos.x = projectedPos.x / kinect.getDepthSource().get()->getWidth() * ofGetWidth();
@@ -156,11 +183,11 @@ void ofApp::checkHandSpeed() {
 		float currentSpeed =
 			(currentBody.joints[JointType_HandRight].getPosition() 
 				- previousBody.joints[JointType_HandRight].getPosition()).length();
-		speedSum += currentSpeed;
+		rightSpeed += currentSpeed / ofGetLastFrameTime();
 		rightHandPreviousSpeed = currentSpeed;
 	}
 	else {
-		speedSum += rightHandPreviousSpeed;
+		rightSpeed += rightHandPreviousSpeed / ofGetLastFrameTime();
 	}
 	if (isJointTrackingStable(JointType_HandLeft)) {
 		ofVec2f projectedPos = currentBody.joints[JointType_HandLeft].getPositionInDepthMap();
@@ -171,16 +198,51 @@ void ofApp::checkHandSpeed() {
 		float currentSpeed =
 			(currentBody.joints[JointType_HandLeft].getPosition()
 				- previousBody.joints[JointType_HandLeft].getPosition()).length();
-		speedSum += currentSpeed;
+		leftSpeed += currentSpeed / ofGetLastFrameTime();
 		leftHandPreviousSpeed = currentSpeed;
 	}
 	else {
-		speedSum += leftHandPreviousSpeed;
+		leftSpeed += leftHandPreviousSpeed / ofGetLastFrameTime();
 	}
-	speedSum = speedSum / 2;
-	float breathLerpAmount = pow(ofClamp(speedSum, 0, 0.1), 0.2);
+	float maxSpeed = max(leftSpeed, rightSpeed);
+	return ofClamp(maxSpeed, 0, 7) / 7; // 1 is faster
+}
+
+float ofApp::getHandDistance() {
+	float handDistance = 0;
+	if (isJointTrackingStable(JointType_HandLeft) && isJointTrackingStable(JointType_HandRight)) {
+		ofVec3f leftPos = currentBody.joints[JointType_HandLeft].getPosition();
+		ofVec3f rightPos = currentBody.joints[JointType_HandRight].getPosition();
+		handDistance = leftPos.distance(rightPos);
+	}
+	else handDistance = previousHandDistance;
+	previousHandDistance = handDistance;
+	return ofClamp(handDistance, 0, 1.5) / 1.5;
+}
+
+void ofApp::controlFlute() {
+	if (didBothHandsOpen()) {
+		int randomInt;
+		do {
+			randomInt = ofRandom(size(noteOptions));
+		} while (randomInt == currentNoteIndex);
+		myChuck->setGlobalInt("note", noteOptions[randomInt]); // Change note.
+		currentNoteIndex = randomInt;
+	}
+
+	float handSpeedLerpAmt = pow(getHandSpeed(), 0.7);
+	myFlute = lerpNewFlute(straightFlute, strongFlute, handSpeedLerpAmt);
 	
-	//lerpBtwFluteParamsAndWrite(noisyFlute, notNoisyFlute, breathLerpAmount);
+	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.5);
+	myFlute = lerpNewFlute(breathyFlute, myFlute, handHeightLerpAmt);
+
+	float handFrontLerpAmt = getMaxHandFront();
+	myFlute.vibratoFreq = ofLerp(0, 4.5, handFrontLerpAmt);
+
+	float handDistanceLerpAmt = pow(getHandDistance(), 2);
+	myFlute.jetDelay = ofLerp(myFlute.jetDelay + 0.055, myFlute.jetDelay - 0.055, handDistanceLerpAmt);
+
+	updateFluteInChuck(myFlute);
 }
 
 void ofApp::updateFlow() {
@@ -237,33 +299,7 @@ void ofApp::updateKinectData() {
 	}
 
 	checkHeadGong();
-	checkBothHandsOpen();
-	checkMaxHandHeight();
-	checkHandSpeed();
-	//lerpBtwFluteParamsAndWrite(straightFlute, normalSalientFlute, sin(ofGetElapsedTimef()));
-
-	/*
-	for (auto body : bodies) {
-		for (auto joint : body.joints) {
-			//now do something with the joints
-		}
-	}
-	*/
-
-	/*
-	//Getting bones (connected joints)
-	// Note that for this we need a reference of which joints are connected to each other.
-	// We call this the 'boneAtlas', and you can ask for a reference to this atlas whenever you like
-	auto boneAtlas = ofxKinectForWindows2::Data::Body::getBonesAtlas();
-
-	for (auto body : bodies) {
-		for (auto bone : boneAtlas) {
-			auto firstJointInBone = body.joints[bone.first];
-			auto secondJointInBone = body.joints[bone.second];
-			//now do something with the joints
-		}
-	}
-	*/
+	controlFlute();
 }
 
 //--------------------------------------------------------------

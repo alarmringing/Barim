@@ -1,7 +1,6 @@
 Flute flute => PoleZero f => JCRev r => dac;
 .75 => r.gain;
 .05 => r.mix;
-.99 => f.blockZero;
 
 // Tunable Parameters
 0.75 => external float finalGain;
@@ -23,6 +22,7 @@ while( true )
     noiseGain => flute.noiseGain;
     pressure => flute.pressure;
     if (previousNote != note) {
+        <<< "finalGain is ", finalGain >>>;
         play(note, 1);
         note => previousNote;
     }

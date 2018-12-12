@@ -34,6 +34,7 @@ struct Flute {
 	double pressure;
 	double vibratoFreq;
 	double vibratoGain;
+	double finalGain;
 };
 
 class ofApp : public ofBaseApp {
@@ -44,13 +45,17 @@ public:
 	void addBranch(float xPos);
 	bool isJointTrackingStable(JointType jointType);
 	void checkHeadGong();
-	void checkBothHandsOpen();
-	void checkMaxHandHeight();
-	void checkHandSpeed();
+	Flute lerpNewFlute(Flute firstFlute, Flute secondFlute, float amt);
+	void updateFluteInChuck(Flute flute);
+	bool didBothHandsOpen();
+	float getMaxHandHeight();
+	float getMaxHandFront();
+	float getHandSpeed();
+	float getHandDistance();
+	void controlFlute();
 	void updateFlow();
 	void updateBranches();
 	void generateBranches();
-	void lerpBtwFluteParamsAndWrite(Flute firstFlute, Flute secondFlute, float amt);
 	void updateKinectData();
 	void update();
 	void drawBackground();
@@ -105,45 +110,49 @@ public:
 	// Hand height
 	float maxHandHeight;
 
+	// Hand front
+	float maxHandFront;
+
 	// Hand velocity
 	float leftHandPreviousSpeed = 0;
 	float rightHandPreviousSpeed = 0;
-	Flute weirdSalientFlute = {
-		0.751648, //jetDelay 
-		0.295592, //jetReflection
-		0.834268, //endReflection
-		0.753903, //noiseGain
-		0.835219, //pressure 
-		1, //vibratoFreq
-		0 // vibratoGain
-	};
+
+	// hand distance
+	float previousHandDistance = 0;
+
+	Flute myFlute = Flute();
 
 	Flute straightFlute = {
-		0.751648, //jetDelay 
-		0.395552, //jetReflection
-		0.604268, //endReflection
-		0.353903, //noiseGain
-		0.735219, //pressure 
-		1, //vibratoFreq
-		0 // vibratoGain
+		0.616657 , //jetDelay 
+		0.517472 , //jetReflection 
+		0.380731 , //endReflection 
+		0.52355 , //noiseGain 
+		0.707450 , //pressure 
+		0.000000 , //vibratofreq 
+		0.5,  //vibratoGain 
+		0.55 //finalGain
 	};
+
+	Flute breathyFlute = {
+		0.616657 , //jetDelay 
+		0.317472 , //jetReflection 
+		0.230731 , //endReflection 
+		0.352355 , //noiseGain 
+		0.607450 , //pressure 
+		0.000000 , //vibratofreq 
+		0.5,  //vibratoGain 
+		0.3 //finalGain
+	};
+
 	Flute strongFlute = {
-		0.751648, //jetDelay 
-		0.395552, //jetReflection
-		0.604268, //endReflection
-		0.353903, //noiseGain
-		0.735219, //pressure 
-		1, //vibratoFreq
-		0 // vibratoGain
-	};
-	Flute normalSalientFlute = {
-		0.751648, //jetDelay 
-		0.682338, //jetReflection
-		0.675746, //endReflection
-		0.739889, //noiseGain
-		0.598381, //pressure 
-		1, //vibratoFreq
-		0 // vibratoGain
+		0.596657 , //jetDelay 
+		0.917472 , //jetReflection 
+		0.780731 , //endReflection 
+		0.152355 , //noiseGain 
+		0.707450 , //pressure 
+		0.000000 , //vibratofreq 
+		0.5,  //vibratoGain 
+		0.7 //finalGain
 	};
 
 	ofxPanel gui;
