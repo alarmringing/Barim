@@ -40,7 +40,7 @@ void Branch::bellAngleTest(float averageAngle, float averageXVelocity) {
 		|| abs(averageAngle) < minAngleThreshold
 		|| ofGetElapsedTimef() - lastWindbellTime < windbellMinInterval) return;
 
-	float bellHitIntensity = 0.04 * pow((abs(averageAngle) / minAngleThreshold), 1.8);
+	float bellHitIntensity = 0.073 * pow((abs(averageAngle) / minAngleThreshold), 1.8);
 	float rate = 0.5 + ofRandomf() * 0.02;
 
 	string args = to_string(bellHitIntensity) + ":" + to_string(rate);

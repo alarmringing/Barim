@@ -57,6 +57,9 @@ void ofApp::setup(){
 	// if the settings file is not present the parameters will not be set during this setup
 	if (!ofFile(PARTICLESETTINGPATH)) gui.saveToFile(PARTICLESETTINGPATH);
 	gui.loadFromFile(PARTICLESETTINGPATH);
+
+	// Note Control
+	noteReader = NoteReader();
 }
 
 void ofApp::sporkNewChuckFile(string pathName) {
@@ -90,7 +93,7 @@ void ofApp::checkHeadGong() {
 			currentHeadJoint.getTrackingState() == TrackingState_Tracked) {
 		sporkNewChuckFile(GONGPATH);
 		lastGongTime = ofGetElapsedTimef();
-		sunAlpha = 200;
+		//sunAlpha = 200;
 	}
 }
 
@@ -118,27 +121,6 @@ void ofApp::updateFluteInChuck(Flute flute) {
 	myChuck->setGlobalFloat("finalGain", flute.finalGain);
 }
 
-bool ofApp::didBothHandsOpen() {
-	// Because humans are slower than kinect's fps, account for duration by first storing when each hand was last opened.
-	if (previousBody.rightHandState == HandState_Closed && currentBody.rightHandState == HandState_Open) {
-		lastRightHandOpenTime = ofGetElapsedTimef();
-	}
-	if (previousBody.leftHandState == HandState_Closed && currentBody.leftHandState == HandState_Open) {
-		lastLeftHandOpenTime = ofGetElapsedTimef();
-	}
-	// Both hands are open now, and both hands were opened within x seconds.
-	if ((currentBody.rightHandState == HandState_Open && currentBody.leftHandState == HandState_Open)
-		&& ofGetElapsedTimef() - lastRightHandOpenTime < handOpenDelayLimit
-		&& ofGetElapsedTimef() - lastLeftHandOpenTime < handOpenDelayLimit) {
-
-		lastRightHandOpenTime = 0;
-		lastLeftHandOpenTime = 0;
-
-		return true;
-	}
-	return false;
-}
-
 float ofApp::getMaxHandHeight() {
 	float currentMaxHandHeight = numeric_limits<float>().lowest();
 	if (isJointTrackingStable(JointType_HandRight) 
@@ -156,17 +138,20 @@ float ofApp::getMaxHandHeight() {
 
 float ofApp::getMaxHandFront() {
 	float currentMaxHandFront = numeric_limits<float>().lowest();
+	float handDistFromElbow;
+	handDistFromElbow = currentBody.joints[JointType_ElbowRight].getPosition().z - currentBody.joints[JointType_HandRight].getPosition().z;
 	if (isJointTrackingStable(JointType_HandRight)
-		&& currentBody.joints[JointType_HandRight].getPosition().z > currentMaxHandFront) {
-		currentMaxHandFront = currentBody.joints[JointType_HandRight].getPosition().z;
+		&& handDistFromElbow > currentMaxHandFront) {
+		currentMaxHandFront = handDistFromElbow;
 	}
+	handDistFromElbow = currentBody.joints[JointType_ElbowLeft].getPosition().z - currentBody.joints[JointType_HandLeft].getPosition().z;
 	if (isJointTrackingStable(JointType_HandLeft)
-		&& currentBody.joints[JointType_HandLeft].getPosition().z > currentMaxHandFront) {
-		currentMaxHandFront = currentBody.joints[JointType_HandLeft].getPosition().z;
+		&& handDistFromElbow > currentMaxHandFront) {
+		currentMaxHandFront = handDistFromElbow;
 	}
 	if (currentMaxHandFront > numeric_limits<float>::lowest()) maxHandFront = currentMaxHandFront;
 	// z is typically 1 at closest, 0.5 at furthest. we want it to be 0 at closest and 1 at furthest.
-	float lerpAmt = ofClamp((1 - ofClamp(currentMaxHandFront, 0, 1)) * 2, 0, 1);
+	float lerpAmt = (ofClamp(currentMaxHandFront, -0.2, 0.3) + 0.1) * 2;
 
 	return lerpAmt;
 }
@@ -221,28 +206,24 @@ float ofApp::getHandDistance() {
 }
 
 void ofApp::controlFlute() {
-	if (didBothHandsOpen()) {
-		int randomInt;
-		do {
-			randomInt = ofRandom(size(noteOptions));
-		} while (randomInt == currentNoteIndex);
-		myChuck->setGlobalInt("note", noteOptions[randomInt]); // Change note.
-		currentNoteIndex = randomInt;
-	}
-
 	float handSpeedLerpAmt = pow(getHandSpeed(), 0.7);
 	myFlute = lerpNewFlute(straightFlute, strongFlute, handSpeedLerpAmt);
+
 	
 	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.5);
 	myFlute = lerpNewFlute(breathyFlute, myFlute, handHeightLerpAmt);
 
 	float handFrontLerpAmt = getMaxHandFront();
-	myFlute.vibratoFreq = ofLerp(0, 4.5, handFrontLerpAmt);
+	myFlute.jetDelay = ofLerp(myFlute.jetDelay + 0.065, myFlute.jetDelay - 0.065, handFrontLerpAmt);
 
 	float handDistanceLerpAmt = pow(getHandDistance(), 2);
-	myFlute.jetDelay = ofLerp(myFlute.jetDelay + 0.055, myFlute.jetDelay - 0.055, handDistanceLerpAmt);
+	//myFlute.vibratoFreq = ofLerp(0, 4.5, handDistanceLerpAmt);
 
 	updateFluteInChuck(myFlute);
+
+	// Inputs from phone.
+	myChuck->setGlobalInt("note", noteReader.currentNote); 
+	myChuck->setGlobalInt("noteOff", noteReader.noteOff);
 }
 
 void ofApp::updateFlow() {
@@ -297,15 +278,15 @@ void ofApp::updateKinectData() {
 			break; // Just take first if there are multiple tracked bodies.
 		}
 	}
-
-	checkHeadGong();
-	controlFlute();
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
 	updateKinectData();
+	checkHeadGong();
+	controlFlute();
 	box2d.update();
+	noteReader.update();
 }
 
 //--------------------------------------------------------------

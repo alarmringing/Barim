@@ -10,6 +10,7 @@
 #include "ofxFlowTools.h"
 
 #include "Branch.h"
+#include "NoteReader.h"
 
 #define SAMPLE float
 #define MY_FORMAT RTAUDIO_FLOAT32
@@ -47,7 +48,6 @@ public:
 	void checkHeadGong();
 	Flute lerpNewFlute(Flute firstFlute, Flute secondFlute, float amt);
 	void updateFluteInChuck(Flute flute);
-	bool didBothHandsOpen();
 	float getMaxHandHeight();
 	float getMaxHandFront();
 	float getHandSpeed();
@@ -74,6 +74,7 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
+	// Chuck setup
 	ChucK *myChuck;
 	string chuckPath;
 	SAMPLE *currentAudioBuffer = NULL;
@@ -130,7 +131,7 @@ public:
 		0.707450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.5,  //vibratoGain 
-		0.55 //finalGain
+		0.65 //finalGain
 	};
 
 	Flute breathyFlute = {
@@ -141,7 +142,7 @@ public:
 		0.607450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.5,  //vibratoGain 
-		0.3 //finalGain
+		0.23 //finalGain
 	};
 
 	Flute strongFlute = {
@@ -152,7 +153,7 @@ public:
 		0.707450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.5,  //vibratoGain 
-		0.7 //finalGain
+		0.99 //finalGain
 	};
 
 	ofxPanel gui;
@@ -180,4 +181,7 @@ public:
 	ftVelocityMask velocityMask;
 	ftFluidSimulation fluidSimulation;
 	ftParticleFlow particleFlow;
+
+	// Note Control
+	NoteReader noteReader;
 };

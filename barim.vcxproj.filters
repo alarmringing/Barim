@@ -2,142 +2,214 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="addons">
-      <UniqueIdentifier>{11da8d75-982f-47b2-a666-2698e04cad26}</UniqueIdentifier>
+      <UniqueIdentifier>{aa49f6af-0a08-4e64-9454-3d27eefbb632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc">
+      <UniqueIdentifier>{9ad140e0-b30b-4fce-bd9d-7d7603b8f839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs">
+      <UniqueIdentifier>{a83f17d8-d228-459c-9c1c-bc55d8421a9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack">
+      <UniqueIdentifier>{02a946f6-f1f3-436f-8475-9d3398722ea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src">
+      <UniqueIdentifier>{b64099e4-8d19-4115-b751-a2183ed770eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src\ip">
+      <UniqueIdentifier>{be5fbce3-b59a-455d-9624-f39ba47140c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src\ip\win32">
+      <UniqueIdentifier>{aa0e7bf9-972e-4ac2-af02-4ce8c7101c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\libs\oscpack\src\osc">
+      <UniqueIdentifier>{7c0056a7-e471-48cf-93c5-3696336a88bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOsc\src">
+      <UniqueIdentifier>{75feb80e-f64b-4ecd-8f59-2276ebc0416c}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d">
-      <UniqueIdentifier>{0e6903e2-21d1-4f76-8050-ad626d0a358f}</UniqueIdentifier>
+      <UniqueIdentifier>{a500821f-fe0a-4ae9-b721-94a92d4d0f13}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\src">
-      <UniqueIdentifier>{647408cb-9630-4803-a214-10ef29df11ec}</UniqueIdentifier>
+      <UniqueIdentifier>{1773c529-f559-486d-a986-a64628a7c0aa}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs">
-      <UniqueIdentifier>{bd353ba3-5cb2-4a1a-9b9e-a18bb87c4e4e}</UniqueIdentifier>
+      <UniqueIdentifier>{cff0b104-d878-4bc7-a637-6adeca40d7df}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D">
-      <UniqueIdentifier>{63d2f16a-2fde-467d-90da-2f26cf37d97d}</UniqueIdentifier>
+      <UniqueIdentifier>{3c468732-9ad3-4125-a6d2-fe375bccd113}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Collision">
-      <UniqueIdentifier>{b184222e-f086-426a-a5b0-7d934da4ee2d}</UniqueIdentifier>
+      <UniqueIdentifier>{29c672ad-95e6-48bb-b53d-753db972aecb}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Collision\Shapes">
-      <UniqueIdentifier>{243a6035-6183-49ea-b478-d0b022ebd407}</UniqueIdentifier>
+      <UniqueIdentifier>{3341d011-6c2a-450f-a9e9-e2d5eb05e182}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Common">
-      <UniqueIdentifier>{43cacefa-9815-4310-8d95-b9c0b035bfb7}</UniqueIdentifier>
+      <UniqueIdentifier>{760cd913-70a8-4a7a-8138-90712f421d09}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics">
-      <UniqueIdentifier>{78a8ff89-b128-4f21-a6a3-2cc091672af4}</UniqueIdentifier>
+      <UniqueIdentifier>{5241de37-18e3-4f8a-8cbd-eba5fef889a8}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Contacts">
-      <UniqueIdentifier>{6b22345a-845c-4e7e-82ab-da4b18546ce0}</UniqueIdentifier>
+      <UniqueIdentifier>{c6d76540-f549-4ee8-96f1-701aa6646063}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Dynamics\Joints">
-      <UniqueIdentifier>{e4284774-bf78-48ea-bfab-e01a6b16534d}</UniqueIdentifier>
+      <UniqueIdentifier>{0e61b983-277a-42dd-bc2b-e125133e8c6f}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\Box2D\Rope">
-      <UniqueIdentifier>{f97fc498-bed7-4627-bc99-a0220d74c872}</UniqueIdentifier>
+      <UniqueIdentifier>{adc3304a-58a9-4554-a3b0-4a65ca13ff45}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxBox2d\libs\triangle">
-      <UniqueIdentifier>{6fe5ab07-b8a3-4544-995b-c57fe03444e1}</UniqueIdentifier>
+      <UniqueIdentifier>{bfd74510-c8d4-47cf-80cc-6a5c9c418e94}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools">
-      <UniqueIdentifier>{618f2efd-acea-41c1-aa89-19538cec424d}</UniqueIdentifier>
+      <UniqueIdentifier>{a0865958-a55c-48a2-92b6-4a4d9915a5db}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src">
-      <UniqueIdentifier>{820fc111-bbf1-400b-8d8b-0f853d96f826}</UniqueIdentifier>
+      <UniqueIdentifier>{37d5f6d3-ddd0-49e3-8906-b60d7dab0ad7}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\drawforces">
-      <UniqueIdentifier>{2a968079-ce56-4374-9385-282ad97884bd}</UniqueIdentifier>
+      <UniqueIdentifier>{a07393bb-992f-4305-8fc1-7eaddfe1ad30}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\fluid">
-      <UniqueIdentifier>{955d95bc-4556-441e-aee0-ab03a62e9b85}</UniqueIdentifier>
+      <UniqueIdentifier>{09a51833-6933-4ba1-b5f3-36e65a6c3d39}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\mask">
-      <UniqueIdentifier>{76305180-5167-4d81-b2fb-7136e64d1c32}</UniqueIdentifier>
+      <UniqueIdentifier>{6fa0e3a6-5af8-4aa7-9802-85cac9ce9467}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\opticalflow">
-      <UniqueIdentifier>{2aac6fe1-00c7-40d4-a12e-d1ac78725e57}</UniqueIdentifier>
+      <UniqueIdentifier>{ab8a0a3c-5820-49b0-a75e-e85e396ea888}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\particles">
-      <UniqueIdentifier>{f1945e2e-6e7f-4021-9bc9-9079c0ad2152}</UniqueIdentifier>
+      <UniqueIdentifier>{27e7c7a8-e50d-4f57-8349-258e51375468}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\splitvelocity">
-      <UniqueIdentifier>{13a80851-a347-41ee-b154-5f9088017143}</UniqueIdentifier>
+      <UniqueIdentifier>{6acb956f-63f7-4f32-8fbc-e83e057b6f9b}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\tools">
-      <UniqueIdentifier>{2425049b-0970-4472-a446-dd5afe4848fc}</UniqueIdentifier>
+      <UniqueIdentifier>{3f20527e-bc40-4863-b12f-1e086ac9f777}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\filters">
-      <UniqueIdentifier>{4eca472f-b776-480e-808f-1d7206dcd5dc}</UniqueIdentifier>
+      <UniqueIdentifier>{909555e5-4c83-4f88-b4c3-2abd06b16cdf}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxFlowTools\src\visualisation">
-      <UniqueIdentifier>{6f7b7067-9105-45f3-a5d0-d750eb030dd7}</UniqueIdentifier>
+      <UniqueIdentifier>{dc934ddc-3325-48dc-9c4e-9695b76938f3}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui">
-      <UniqueIdentifier>{00e3b14d-383b-49ff-b8cd-d071fc0a214e}</UniqueIdentifier>
+      <UniqueIdentifier>{fafedd8c-38c0-403e-b133-0932d6ca5aa9}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui\src">
-      <UniqueIdentifier>{e040495f-5b2e-4c16-a64a-c9a593b49e33}</UniqueIdentifier>
+      <UniqueIdentifier>{32778e19-63c8-4431-8b9d-cdbc70e35330}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader">
-      <UniqueIdentifier>{bfedac4a-491b-4535-a22f-232ae214575d}</UniqueIdentifier>
+      <UniqueIdentifier>{b4af6fa1-b594-46c8-9993-73462a04c967}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\src">
-      <UniqueIdentifier>{e95b3e8d-4f25-4dd2-bcbb-8916bdc2ee06}</UniqueIdentifier>
+      <UniqueIdentifier>{0dee38b5-2950-4ac0-a84f-6cbb4f9e9cb3}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs">
-      <UniqueIdentifier>{1e27a37c-33f8-4e92-ae48-46fde01edabf}</UniqueIdentifier>
+      <UniqueIdentifier>{6f891600-f5d3-4cff-ba8b-15627fea3398}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp">
-      <UniqueIdentifier>{b6c524b5-3d85-463c-913a-735c003c6cc5}</UniqueIdentifier>
+      <UniqueIdentifier>{9da04f9f-8f57-4d8c-8653-1d50cd8b2daf}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include">
-      <UniqueIdentifier>{819b5115-c3ca-4f9e-9279-5338c79c972a}</UniqueIdentifier>
+      <UniqueIdentifier>{f571d682-47fa-47ce-8efc-e88249d5a125}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp">
-      <UniqueIdentifier>{2dedcf29-1ada-4aef-bcbb-b9ad8452823a}</UniqueIdentifier>
+      <UniqueIdentifier>{2aabf32e-2245-4b23-8e2b-435cb70ebcf1}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler">
-      <UniqueIdentifier>{9b337666-4653-435f-8ead-5f80b6815121}</UniqueIdentifier>
+      <UniqueIdentifier>{ffc7b7ed-1f3a-4ca8-b665-799acf9d93ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\lib">
+      <UniqueIdentifier>{0da5e753-9487-429d-b277-d3991ebeb203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\lib\vs">
+      <UniqueIdentifier>{310794bc-501e-48f4-8c1d-d393e31f77cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32">
+      <UniqueIdentifier>{8ba8d9b4-bf31-4ea9-8a00-04a17829032d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64">
+      <UniqueIdentifier>{dce945b1-3f60-483c-b47b-ef327792f2b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps">
-      <UniqueIdentifier>{7ff7e8f8-32b6-48c5-a809-cf25d08e5132}</UniqueIdentifier>
+      <UniqueIdentifier>{ff473c13-184e-415c-9496-c3175871cd6e}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps">
-      <UniqueIdentifier>{8df42478-4fb7-43b5-9dcf-67fbfb307ea6}</UniqueIdentifier>
+      <UniqueIdentifier>{1f9518ec-6f5d-42f4-8c4f-4371ceb08b00}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim">
-      <UniqueIdentifier>{638a008d-7e95-44fd-94c9-cbf12782e7d6}</UniqueIdentifier>
+      <UniqueIdentifier>{b2d69c09-1d04-4e1d-9aad-39775e22550b}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\src">
-      <UniqueIdentifier>{e64a1faf-b4d5-4ba0-a6d5-aa2e4a8f548e}</UniqueIdentifier>
+      <UniqueIdentifier>{0cd93a65-d608-4f32-acc2-6c5b1bea15fb}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib">
-      <UniqueIdentifier>{ab63c199-b4d4-470e-baae-5604ed020818}</UniqueIdentifier>
+      <UniqueIdentifier>{5e53f70b-589b-432b-81be-3fc2b4de4ca7}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib\chuck">
-      <UniqueIdentifier>{02ae1539-a656-4ad9-919c-560a43f1d4d7}</UniqueIdentifier>
+      <UniqueIdentifier>{0bca1464-7ddb-48dc-9aa4-109b2752203e}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib\chuck\core">
-      <UniqueIdentifier>{149e8c6d-6263-4354-a52a-88f8698b4e59}</UniqueIdentifier>
+      <UniqueIdentifier>{e5794038-c695-4550-a435-05c543ba58d1}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib\chuck\core\lo">
-      <UniqueIdentifier>{335ffa6d-4a7d-4df4-91bf-3e2f4bb76296}</UniqueIdentifier>
+      <UniqueIdentifier>{b5408ee9-f949-4e9f-92f8-18e96a2557df}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib\chuck\core\regex">
-      <UniqueIdentifier>{57470007-7e67-488b-9a2c-8684b9dc64ce}</UniqueIdentifier>
+      <UniqueIdentifier>{6c76a085-22d2-4ac3-97b8-e3f68ea408c2}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib\chuck\host">
-      <UniqueIdentifier>{ba5c3094-dc93-4af9-901f-b5077b2af8f7}</UniqueIdentifier>
+      <UniqueIdentifier>{2d864226-6637-48c6-af56-68749136dabb}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\lib\chuck\host\RtAudio">
-      <UniqueIdentifier>{b35b0ee1-4985-4619-9def-78880e6fe720}</UniqueIdentifier>
+      <UniqueIdentifier>{c627bcee-1c09-402f-a9c5-a1e9c23286da}</UniqueIdentifier>
     </Filter>
     <Filter Include="apps\myApps\barim\shaders">
-      <UniqueIdentifier>{e3719f16-3e0b-4dc8-a015-f6b83b5c3677}</UniqueIdentifier>
+      <UniqueIdentifier>{9276bad9-fdbc-470b-bfe6-c80577e9ff7c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32\UdpSocket.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\src\ofxOscBundle.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\src\ofxOscMessage.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\src\ofxOscParameterSync.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\src\ofxOscReceiver.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOsc\src\ofxOscSender.cpp">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.cpp">
       <Filter>addons\ofxBox2d\src</Filter>
     </ClCompile>
@@ -350,6 +422,18 @@
     </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
     </ClCompile>
     <ClCompile Include="src\Branch.cpp">
       <Filter>apps\myApps\barim\src</Filter>
@@ -579,20 +663,71 @@
     <ClCompile Include="lib\chuck\host\RtAudio\RtAudio.cpp">
       <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    <ClCompile Include="src\NoteReader.cpp">
+      <Filter>apps\myApps\barim\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\NetworkingUtils.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\PacketListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\TimerListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\ip\UdpSocket.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\MessageMappingOscPacketListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscException.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscHostEndianness.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscPacketListener.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
+      <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOsc.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscArg.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscBundle.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscMessage.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscParameterSync.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscReceiver.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscSender.h">
+      <Filter>addons\ofxOsc\src</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxBox2d\src\ofxBox2d.h">
       <Filter>addons\ofxBox2d\src</Filter>
     </ClInclude>
@@ -995,6 +1130,129 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpUtils.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ai_assert.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\anim.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\camera.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cexport.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cfileio.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cimport.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\color4.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\config.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultLogger.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\defs.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Exporter.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Importer.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\importerdesc.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOStream.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOSystem.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\light.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Logger.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\LogStream.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\material.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix3x3.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix4x4.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\mesh.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\metadata.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\NullLogger.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\postprocess.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ProgressHandler.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\quaternion.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\scene.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\texture.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\types.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector2.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\poppack1.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pstdint.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pushpack1.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
     <ClInclude Include="src\Branch.h">
       <Filter>apps\myApps\barim\src</Filter>
     </ClInclude>
@@ -1196,142 +1454,19 @@
     <ClInclude Include="lib\chuck\host\RtAudio\RtError.h">
       <Filter>apps\myApps\barim\lib\chuck\host\RtAudio</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ai_assert.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\anim.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\camera.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cexport.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cfileio.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\cimport.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\color4.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\poppack1.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pstdint.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pushpack1.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\config.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\DefaultLogger.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\defs.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Exporter.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Importer.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\importerdesc.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOStream.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\IOSystem.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\light.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Logger.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\LogStream.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\material.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix3x3.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\matrix4x4.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\mesh.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\metadata.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\NullLogger.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\postprocess.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\ProgressHandler.hpp">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\quaternion.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\scene.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\texture.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\types.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector2.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\version.h">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.h">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpUtils.h">
-      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    <ClInclude Include="src\NoteReader.h">
+      <Filter>apps\myApps\barim\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="icon.rc">
-      <Filter>apps\myApps\barim</Filter>
-    </ResourceCompile>
+    <Library Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32</Filter>
+    </Library>
+    <Library Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64</Filter>
+    </Library>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\background.frag">
-      <Filter>apps\myApps\barim\shaders</Filter>
-    </None>
-    <None Include="shaders\background.vert">
-      <Filter>apps\myApps\barim\shaders</Filter>
-    </None>
     <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\color4.inl">
       <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
     </None>
@@ -1353,13 +1488,16 @@
     <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\vector3.inl">
       <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp</Filter>
     </None>
+    <None Include="shaders\background.frag">
+      <Filter>apps\myApps\barim\shaders</Filter>
+    </None>
+    <None Include="shaders\background.vert">
+      <Filter>apps\myApps\barim\shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp</Filter>
-    </Library>
-    <Library Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib">
-      <Filter>addons\ofxAssimpModelLoader\libs\assimp</Filter>
-    </Library>
+    <ResourceCompile Include="icon.rc">
+      <Filter>apps\myApps\barim</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
