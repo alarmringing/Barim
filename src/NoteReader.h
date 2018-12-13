@@ -17,7 +17,7 @@ public:
 	//int current_msg_string;
 
 	bool fingerStatus[4];
-	bool noteOff;
+	bool noteOn = false;
 	int currentNote = 61;
 };
 

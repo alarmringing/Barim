@@ -39,7 +39,7 @@ void NoteReader::changeNote(string fingerId, bool onOff) {
 
 	string noteString = to_string(fingerStatus[0]) + to_string(fingerStatus[1]) + to_string(fingerStatus[2]) + to_string(fingerStatus[3]);
 
-	if (noteString == "0000") noteOff = true;
+	if (noteString == "0000") noteOn = false;
 	else {
 		if (noteString == "1110") currentNote = 66;
 		if (noteString == "1100") currentNote = 68;
@@ -48,7 +48,7 @@ void NoteReader::changeNote(string fingerId, bool onOff) {
 		if (noteString == "1111") currentNote = 73;
 		if (noteString == "1101") currentNote = 75;
 		if (noteString == "1001") currentNote = 78;
-		noteOff = false;
+		noteOn = true;
 	}
 }
 

@@ -4,7 +4,7 @@ Flute flute => PoleZero f => JCRev r => dac;
 
 // Tunable Parameters
 1 => int alreadyBlowing;
-1 => external int noteOff;
+0 => external int noteOn;
 0.75 => external float finalGain;
 61 => external int note => int previousNote;
 0.616657 => external float jetDelay;
@@ -18,23 +18,23 @@ Flute flute => PoleZero f => JCRev r => dac;
 // infinite time-loop
 while( true )
 {
-    finalGain => r.gain;
     jetDelay => flute.jetDelay;
     jetReflection => flute.jetReflection;
     endReflection => flute.endReflection;
     noiseGain => flute.noiseGain;
     pressure => flute.pressure;
     Std.mtof( note ) => flute.freq;
-    if (noteOff > 0 && alreadyBlowing == 1) {
-        <<< "Stopped blowing" >>>;
+
+    if (noteOn == 0) {
         velocity => flute.noteOff;
         0 => alreadyBlowing;
     }
-    else if(noteOff == 0 
+    else if(noteOn > 0 
         && alreadyBlowing == 0){
-        <<< "started blowing" >>>;
         velocity => flute.noteOn;
+        finalGain => r.gain;
         1 => alreadyBlowing;
     }
+
     10::ms => now;
 }

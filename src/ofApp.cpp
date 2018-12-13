@@ -213,17 +213,18 @@ void ofApp::controlFlute() {
 	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.5);
 	myFlute = lerpNewFlute(breathyFlute, myFlute, handHeightLerpAmt);
 
-	float handFrontLerpAmt = getMaxHandFront();
-	myFlute.jetDelay = ofLerp(myFlute.jetDelay + 0.065, myFlute.jetDelay - 0.065, handFrontLerpAmt);
+	//float handFrontLerpAmt = getMaxHandFront();
+
 
 	float handDistanceLerpAmt = pow(getHandDistance(), 2);
+	myFlute.jetDelay = ofLerp(myFlute.jetDelay + 0.055, myFlute.jetDelay - 0.055, handDistanceLerpAmt);
 	//myFlute.vibratoFreq = ofLerp(0, 4.5, handDistanceLerpAmt);
 
 	updateFluteInChuck(myFlute);
 
 	// Inputs from phone.
 	myChuck->setGlobalInt("note", noteReader.currentNote); 
-	myChuck->setGlobalInt("noteOff", noteReader.noteOff);
+	myChuck->setGlobalInt("noteOn", noteReader.noteOn);
 }
 
 void ofApp::updateFlow() {

@@ -124,10 +124,10 @@ public:
 	Flute myFlute = Flute();
 
 	Flute straightFlute = {
-		0.616657 , //jetDelay 
+		0.356658 , //jetDelay 
 		0.517472 , //jetReflection 
 		0.380731 , //endReflection 
-		0.52355 , //noiseGain 
+		0.32355 , //noiseGain 
 		0.707450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.5,  //vibratoGain 
@@ -135,7 +135,7 @@ public:
 	};
 
 	Flute breathyFlute = {
-		0.616657 , //jetDelay 
+		0.356658 , //jetDelay 
 		0.317472 , //jetReflection 
 		0.230731 , //endReflection 
 		0.352355 , //noiseGain 
@@ -146,7 +146,7 @@ public:
 	};
 
 	Flute strongFlute = {
-		0.596657 , //jetDelay 
+		0.356658 , //jetDelay 
 		0.917472 , //jetReflection 
 		0.780731 , //endReflection 
 		0.152355 , //noiseGain 
