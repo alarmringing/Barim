@@ -121,6 +121,8 @@ public:
 	// hand distance
 	float previousHandDistance = 0;
 
+	float pitchPushRange = 0.11;
+	float strongFluteFilterRate = 0.7;
 	Flute myFlute = Flute();
 
 	Flute straightFlute = {
@@ -130,8 +132,8 @@ public:
 		0.32355 , //noiseGain 
 		0.707450 , //pressure 
 		0.000000 , //vibratofreq 
-		0.5,  //vibratoGain 
-		0.65 //finalGain
+		0.8,  //vibratoGain 
+		0.4 //finalGain
 	};
 
 	Flute breathyFlute = {
@@ -139,10 +141,10 @@ public:
 		0.317472 , //jetReflection 
 		0.230731 , //endReflection 
 		0.352355 , //noiseGain 
-		0.607450 , //pressure 
+		0.537450 , //pressure 
 		0.000000 , //vibratofreq 
-		0.5,  //vibratoGain 
-		0.23 //finalGain
+		0.01,  //vibratoGain 
+		0.1 //finalGain
 	};
 
 	Flute strongFlute = {
@@ -152,7 +154,7 @@ public:
 		0.152355 , //noiseGain 
 		0.707450 , //pressure 
 		0.000000 , //vibratofreq 
-		0.5,  //vibratoGain 
+		0.8,  //vibratoGain 
 		0.99 //finalGain
 	};
 

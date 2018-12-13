@@ -3,6 +3,7 @@ Flute flute => PoleZero f => JCRev r => dac;
 .05 => r.mix;
 
 // Tunable Parameters
+1 => external float filterRate;
 1 => int alreadyBlowing;
 0 => external int noteOn;
 0.75 => external float finalGain;
@@ -23,7 +24,10 @@ while( true )
     endReflection => flute.endReflection;
     noiseGain => flute.noiseGain;
     pressure => flute.pressure;
+    vibratoGain => flute.vibratoGain;
+    vibratoFreq => flute.vibratoFreq;
     Std.mtof( note ) => flute.freq;
+    filterRate => f.blockZero;
 
     if (noteOn == 0) {
         velocity => flute.noteOff;

@@ -151,7 +151,7 @@ float ofApp::getMaxHandFront() {
 	}
 	if (currentMaxHandFront > numeric_limits<float>::lowest()) maxHandFront = currentMaxHandFront;
 	// z is typically 1 at closest, 0.5 at furthest. we want it to be 0 at closest and 1 at furthest.
-	float lerpAmt = (ofClamp(currentMaxHandFront, -0.2, 0.3) + 0.1) * 2;
+	float lerpAmt = ofClamp(currentMaxHandFront, 0, 0.3) * (1 / 0.3);
 
 	return lerpAmt;
 }
@@ -206,8 +206,9 @@ float ofApp::getHandDistance() {
 }
 
 void ofApp::controlFlute() {
-	float handSpeedLerpAmt = pow(getHandSpeed(), 0.7);
-	myFlute = lerpNewFlute(straightFlute, strongFlute, handSpeedLerpAmt);
+	float handSpeedLerpAmt = getHandSpeed();
+	myFlute = lerpNewFlute(straightFlute, strongFlute, pow(handSpeedLerpAmt, 0.15));
+	myChuck->setGlobalFloat("filterRate", ofLerp(1, strongFluteFilterRate, handSpeedLerpAmt));
 
 	
 	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.5);
@@ -215,10 +216,8 @@ void ofApp::controlFlute() {
 
 	//float handFrontLerpAmt = getMaxHandFront();
 
-
 	float handDistanceLerpAmt = pow(getHandDistance(), 2);
-	myFlute.jetDelay = ofLerp(myFlute.jetDelay + 0.055, myFlute.jetDelay - 0.055, handDistanceLerpAmt);
-	//myFlute.vibratoFreq = ofLerp(0, 4.5, handDistanceLerpAmt);
+	myFlute.jetDelay = ofLerp(myFlute.jetDelay + pitchPushRange / 2, myFlute.jetDelay - pitchPushRange / 2, handDistanceLerpAmt);
 
 	updateFluteInChuck(myFlute);
 
