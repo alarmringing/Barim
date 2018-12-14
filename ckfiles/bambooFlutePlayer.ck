@@ -27,7 +27,7 @@ while( true )
     vibratoGain => flute.vibratoGain;
     vibratoFreq => flute.vibratoFreq;
     Std.mtof( note ) => flute.freq;
-    filterRate => f.blockZero;
+    finalGain => r.gain;
 
     if (noteOn == 0) {
         velocity => flute.noteOff;

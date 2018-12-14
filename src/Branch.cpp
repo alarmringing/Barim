@@ -62,16 +62,18 @@ void Branch::draw(ofColor branchColor, ofImage &leafImage) {
 		averageXVelocity += nodes[i + 1].get()->getVelocity().x / nodes.size();
 		averageAngle += angleDeg / nodes.size();
 
+		ofPushStyle();
 		ofPushMatrix();
+		ofColor(255, 255, 255, 255);
 		ofTranslate(bodyA.middle(bodyB).x, bodyA.middle(bodyB).y, 0);
 		ofRotate(angleDeg);
 		leafImage.setAnchorPercent(0.5, 0.5);
 		leafImage.draw(0, 0, leafSize, leafSize);
-		ofPopMatrix();		
+		ofPopMatrix();
+		ofPopStyle();
 	}
 	bellAngleTest(averageAngle, averageXVelocity);
 	for (int i = 0; i< branchJoints.size(); i++) {
-		ofSetColor(branchColor);
 		ofxBox2dJoint *branch = branchJoints[i].get();
 		branch->draw();
 	}

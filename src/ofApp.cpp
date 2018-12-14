@@ -15,6 +15,8 @@ void ofApp::setup(){
 
 	backgroundShader.load("shaders/background");
 	backgroundFbo.allocate(ofGetWidth(), ofGetHeight());
+	leafShader.load("shaders/leaf");
+	leafFbo.allocate(ofGetWidth(), ofGetHeight());
 	
 	// physics
 	box2d.init();
@@ -93,7 +95,7 @@ void ofApp::checkHeadGong() {
 			currentHeadJoint.getTrackingState() == TrackingState_Tracked) {
 		sporkNewChuckFile(GONGPATH);
 		lastGongTime = ofGetElapsedTimef();
-		//sunAlpha = 200;
+		fogAmount = 0.6;
 	}
 }
 
@@ -208,10 +210,10 @@ float ofApp::getHandDistance() {
 void ofApp::controlFlute() {
 	float handSpeedLerpAmt = getHandSpeed();
 	myFlute = lerpNewFlute(straightFlute, strongFlute, pow(handSpeedLerpAmt, 0.15));
-	myChuck->setGlobalFloat("filterRate", ofLerp(1, strongFluteFilterRate, handSpeedLerpAmt));
+	//myChuck->setGlobalFloat("filterRate", ofLerp(1, strongFluteFilterRate, handSpeedLerpAmt));
 
 	
-	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.5);
+	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.52);
 	myFlute = lerpNewFlute(breathyFlute, myFlute, handHeightLerpAmt);
 
 	//float handFrontLerpAmt = getMaxHandFront();
@@ -239,8 +241,8 @@ void ofApp::updateFlow() {
 
 	velocityMask.setDensity(flowInputFbo.getTexture());
 	velocityMask.setVelocity(opticalFlow.getOpticalFlow());
-	velocityMask.update(); 
-	
+	velocityMask.update();
+
 	fluidSimulation.addVelocity(opticalFlow.getOpticalFlowDecay());
 	fluidSimulation.addDensity(velocityMask.getColorMask());
 	fluidSimulation.addTemperature(velocityMask.getLuminanceMask());
@@ -291,27 +293,35 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::drawBackground() {
-	backgroundFbo.begin();
+	//backgroundFbo.begin();
+	ofBackground(20, 20, 20, 255);
 	backgroundShader.begin();
-
+	backgroundShader.setUniform2f("u_resolution", backgroundFbo.getWidth(), backgroundFbo.getHeight());
+	backgroundShader.setUniform1f("u_time", ofGetElapsedTimef());
+	backgroundShader.setUniform1f("u_deltaTime", ofGetLastFrameTime());
+	if (fogAmount > minFogAmount) fogAmount = fogAmount - fogFadeRate * ofGetLastFrameTime();
+	backgroundShader.setUniform1f("u_fogAmount", fogAmount);
+	ofSetColor(200, 200, 200, 255);
+	ofDrawRectangle(0, 0, backgroundFbo.getWidth(), backgroundFbo.getHeight());
 	backgroundShader.end();
-	backgroundFbo.end();
+	//backgroundFbo.end();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	ofBackground(20, 20, 20, 255);
+
+	leafFbo.begin();
+	ofPushMatrix();
+	//ofScale(-1, 1, 1);
+	//ofTranslate(-ofGetWidth(), 0, 0);
+	//ofBackground(20, 20, 20, 255);
 	//kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//kinect.getColorSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//backgroundFbo.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//kinect.getBodySource()->drawProjected(0, 0, ofGetWindowWidth(), ofGetWindowHeight(), ofxKFW2::ProjectionCoordinates::DepthCamera);
 
-	ofPushStyle();
-	ofSetColor(ofColor(248, 65, 36, sunAlpha));
-	if (sunAlpha > 0) sunAlpha = sunAlpha - sunFadeRate * ofGetLastFrameTime();
-	ofSetCircleResolution(60);
-	ofDrawCircle(ofGetWindowWidth() / 2 - sunSize / 2, ofGetWindowHeight() * 1 / 3 - sunSize / 2, sunSize);
-	ofPopStyle();
+	drawBackground();
+	//backgroundFbo.draw(0, 0, ofGetWidth(), ofGetHeight());	
 
 	ofPushStyle();
 	ofSetColor(ofColor(200, 200, 200, 255));
@@ -320,18 +330,32 @@ void ofApp::draw(){
 		particleFlow.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	ofPopStyle();
 
+	ofPushStyle();
 	//draw willow
 	for (int i = 0; i < branches.size(); i++) {
 		branches[i]->draw(ofColor(200, 200, 200, 255), leafImage);
 	}
+	ofPopStyle();
+
+	/*
+	leafShader.begin();
+	leafShader.setUniform2f("u_resolution", backgroundFbo.getWidth(), backgroundFbo.getHeight());
+	leafShader.setUniform1f("u_time", ofGetElapsedTimef());
+	leafShader.setUniformTexture("leafTex", leafFbo, 0);
+	ofDrawRectangle(0, 0, leafFbo.getWidth(), leafFbo.getHeight());
+
+	leafShader.end();
+	*/
 
 	// Presentation (body tracking)
 	float w = 270;
 	float h = 180;
 	kinect.getBodyIndexSource()->draw(ofGetWindowWidth() - w, ofGetWindowHeight() - h, w, h);
 
-
-	gui.draw();
+	ofPopMatrix();
+	leafFbo.end();
+	leafFbo.draw(0,0,ofGetWidth(), ofGetHeight());
+	//gui.draw();
 }
 
 //--------------------------------------------------------------

@@ -100,6 +100,9 @@ public:
 	float sunAlpha = 0.0f;
 	float sunSize = 200;
 	ofImage sunImage;
+	float fogFadeRate = 0.12;
+	float minFogAmount = 0.1f;
+	float fogAmount = 0.1f;
 
 	// Hand open check
 	int noteOptions[5] = { 61, 63, 66, 68, 70 };
@@ -144,7 +147,7 @@ public:
 		0.537450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.01,  //vibratoGain 
-		0.1 //finalGain
+		0.2 //finalGain
 	};
 
 	Flute strongFlute = {
@@ -162,6 +165,8 @@ public:
 	ofxLabel fps;
 	ofFbo backgroundFbo;
 	ofShader backgroundShader;
+	ofShader leafShader;
+	ofFbo leafFbo;
 	float dayProgressionSpeed;
 
 	// Willow world
