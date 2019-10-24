@@ -54,12 +54,10 @@ public:
 	float getHandDistance();
 	void controlFlute();
 	void updateFlow();
-	void updateBranches();
 	void generateBranches();
 	void updateKinectData();
 	void update();
 	void drawBackground();
-	void drawWillow();
 	void draw();
 
 	void keyPressed(int key);
@@ -174,7 +172,7 @@ public:
 	ofxBox2d willowWorld;
 	int numBranches = 50;
 	int numBranchGroups = 5;
-	float branchGroupDeviationDegree = 300;
+	float branchGroupDeviationDegree = 200;
 	vector<shared_ptr<Branch>> branches;
 
 	// Leaf

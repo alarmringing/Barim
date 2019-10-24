@@ -85,6 +85,7 @@ void ofApp::generateBranches() {
 		groupPositions[i] *= (ofGetWidth()*0.8) / (maxPos - minPos);
 		groupPositions[i] = groupPositions[i] - minPos + 150;
 	}
+	
 
 	// Generate each branch and add it to branches.
 	for (int i = 0; i < numBranches; i++) {
@@ -92,7 +93,7 @@ void ofApp::generateBranches() {
 		float deeviationFromGroup = ofRandom(branchGroupDeviationDegree) - branchGroupDeviationDegree / 2;
 		float xPos = groupPositions[branchGroupMembership] + deeviationFromGroup;
 		int nodeNum = 6 + ofRandom(27);
-		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -5 - 3 * ofRandomf(), nodeNum, myChuck));
+		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -20 - 10 * ofRandomf(), nodeNum, myChuck));
 		branches.push_back(branch);
 	}
 }
@@ -275,9 +276,6 @@ void ofApp::updateFlow() {
 	particleFlow.update();
 }
 
-void ofApp::updateBranches() {
-
-}
 
 void ofApp::updateKinectData() {
 	kinect.update(); // Update early to not feed into ofxFlowTools when there's no body recognition.
@@ -285,7 +283,6 @@ void ofApp::updateKinectData() {
 	if (!kinect.getBodySource()->isFrameNew()) return; // Return if no human in scene or kinect is not working.
 
 	updateFlow();
-	updateBranches();
 
 	for (Data::Body body : bodies) {
 		if (body.tracked) {
