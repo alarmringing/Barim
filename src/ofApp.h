@@ -131,9 +131,9 @@ public:
 		0.417472 , //jetReflection 
 		0.580731 , //endReflection 
 		0.32355 , //noiseGain 
-		0.537450 , //pressure 
+		0.567450 , //pressure 
 		0.000000 , //vibratofreq 
-		0.8,  //vibratoGain 
+		0.4,  //vibratoGain 
 		0.4 //finalGain
 	};
 
@@ -142,9 +142,9 @@ public:
 		0.317472 , //jetReflection 
 		0.230731 , //endReflection 
 		0.352355 , //noiseGain 
-		0.537450 , //pressure 
+		0.567450 , //pressure 
 		0.000000 , //vibratofreq 
-		0.01,  //vibratoGain 
+		0.1,  //vibratoGain 
 		0.1 //finalGain
 	};
 	
@@ -155,7 +155,7 @@ public:
 		0.852355 , //noiseGain 
 		0.657450 , //pressure 
 		0.000000 , //vibratofreq 
-		0.8,  //vibratoGain 
+		0.6,  //vibratoGain 
 		0.8 //finalGain
 	};
 	

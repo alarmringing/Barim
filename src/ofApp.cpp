@@ -181,9 +181,8 @@ float ofApp::getMaxHandFront() {
 	}
 	if (currentMaxHandFront > numeric_limits<float>::lowest()) maxHandFront = currentMaxHandFront;
 	// z is typically 1 at closest, 0.5 at furthest. we want it to be 0 at closest and 1 at furthest.
-	float lerpAmt = ofClamp(currentMaxHandFront, 0, 0.3) * (1 / 0.3);
 
-	return lerpAmt;
+	return ofNormalize(ofClamp(currentMaxHandFront, 0.2, 0.4), 0.2, 0.4);
 }
 
 float ofApp::getHandSpeed() {
@@ -245,7 +244,9 @@ void ofApp::controlFlute() {
 	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.32);
 	myFlute = lerpNewFlute(breathyFlute, myFlute, handHeightLerpAmt);
 
-	//float handFrontLerpAmt = getMaxHandFront();
+	float handFrontLerpAmt = pow(getMaxHandFront(), 3);
+	//std::cout << getMaxHandFront() << std::endl;
+	//vibratoFreq = ofLerp(0, 5.5, handFrontLerpAmt);
 
 	float handDistanceLerpAmt = pow(getHandDistance(), 2);
 	myFlute.jetDelay = ofLerp(myFlute.jetDelay + pitchPushRange / 2, myFlute.jetDelay - pitchPushRange / 2, handDistanceLerpAmt);
