@@ -30,7 +30,7 @@ while( true )
     finalGain => r.gain;
 
     if (noteOn == 0) {
-        velocity => flute.noteOff;
+        0.001 => flute.noteOff;
         0 => alreadyBlowing;
     }
     else if(noteOn > 0 
