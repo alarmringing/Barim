@@ -57,8 +57,8 @@
 		<lifespan_spread>0.142857</lifespan_spread>
 		<mass>0.989796</mass>
 		<mass_spread>0.112245</mass_spread>
-		<size>0.918367</size>
-		<size_spread>0.229592</size_spread>
+		<size>1.418367</size>
+		<size_spread>0.629592</size_spread>
 		<twinkle_speed>11</twinkle_speed>
 		<gravity>0, 2.60725</gravity>
 	</particle_flow>
