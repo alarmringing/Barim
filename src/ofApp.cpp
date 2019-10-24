@@ -31,7 +31,7 @@ void ofApp::setup(){
 	boxRightHand.get()->setup(box2d.world, 0, 0, handSize);
 
 	// branches
-	Branch::scaleFactor = 2;
+	Branch::scaleFactor = 1.7;
 	generateBranches();
 	leafImage.load(LEAF2DPATH);
 
@@ -70,9 +70,28 @@ void ofApp::sporkNewChuckFile(string pathName) {
 }
 
 void ofApp::generateBranches() {
+	// Generate positions of branch groups.
+	vector<float> groupPositions;
+	float maxPos = 0.0f;
+	float minPos = ofGetWidth() + 10;
+	for (int i = 0; i < numBranchGroups; i++) {
+		float newPos = ofRandom(ofGetWidth());
+		if (maxPos < newPos) maxPos = newPos;
+		if (minPos > newPos) minPos = newPos;
+		groupPositions.push_back(newPos);
+	}
+	// Normalize the group positions so that they are reasonably spaced across screen.
+	for (int i = 0; i < numBranchGroups; i++) {
+		groupPositions[i] *= (ofGetWidth()*0.8) / (maxPos - minPos);
+		groupPositions[i] = groupPositions[i] - minPos + 150;
+	}
+
+	// Generate each branch and add it to branches.
 	for (int i = 0; i < numBranches; i++) {
-		float xPos = ofRandom(ofGetWidth());
-		int nodeNum = 15 + ofRandom(10);
+		int branchGroupMembership = ofRandom(numBranchGroups);
+		float deeviationFromGroup = ofRandom(branchGroupDeviationDegree) - branchGroupDeviationDegree / 2;
+		float xPos = groupPositions[branchGroupMembership] + deeviationFromGroup;
+		int nodeNum = 6 + ofRandom(27);
 		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -5 - 3 * ofRandomf(), nodeNum, myChuck));
 		branches.push_back(branch);
 	}
