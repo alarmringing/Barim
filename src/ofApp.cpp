@@ -85,6 +85,7 @@ void ofApp::generateBranches() {
 		groupPositions[i] = groupPositions[i] - minPos + 10;
 		groupPositions[i] *= (ofGetWidth()*0.8) / (maxPos - minPos);
 	}
+	std::sort(groupPositions.begin(), groupPositions.end());
 	
 
 	// Generate each branch and add it to branches.

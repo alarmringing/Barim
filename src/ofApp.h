@@ -169,7 +169,7 @@ public:
 	// Willow world
 	ofxBox2d box2d;
 	ofxBox2d willowWorld;
-	int numBranches = 50;
+	int numBranches = 40;
 	int numBranchGroups = 5;
 	float branchGroupDeviationDegree = 200;
 	vector<shared_ptr<Branch>> branches;
