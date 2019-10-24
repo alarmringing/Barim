@@ -338,8 +338,12 @@ void ofApp::draw(){
 
 	leafFbo.begin();
 	ofPushMatrix();
-	//ofScale(-1, 1, 1);
-	//ofTranslate(-ofGetWidth(), 0, 0);
+
+	/* For flipped projector
+	ofScale(-1, 1, 1);
+	ofTranslate(-ofGetWidth(), 0, 0);
+	*/
+
 	//ofBackground(20, 20, 20, 255);
 	//kinect.getBodyIndexSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	//kinect.getColorSource()->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
@@ -373,14 +377,16 @@ void ofApp::draw(){
 	leafShader.end();
 	*/
 
-	// Presentation (body tracking)
+	// Little body tracking window
 	float w = 270;
 	float h = 180;
 	kinect.getBodyIndexSource()->draw(ofGetWindowWidth() - w, ofGetWindowHeight() - h, w, h);
 
 	ofPopMatrix();
+
 	leafFbo.end();
 	leafFbo.draw(0,0,ofGetWidth(), ofGetHeight());
+	
 	//gui.draw();
 }
 

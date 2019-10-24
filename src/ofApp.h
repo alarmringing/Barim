@@ -134,7 +134,7 @@ public:
 		0.567450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.4,  //vibratoGain 
-		0.4 //finalGain
+		0.2 //finalGain
 	};
 
 	Flute breathyFlute = {
@@ -152,7 +152,7 @@ public:
 		0.356658 , //jetDelay 
 		0.417472 , //jetReflection 
 		0.880731 , //endReflection 
-		0.852355 , //noiseGain 
+		0.652355 , //noiseGain 
 		0.657450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.6,  //vibratoGain 

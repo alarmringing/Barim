@@ -41,6 +41,7 @@ void NoteReader::changeNote(string fingerId, bool onOff) {
 
 	if (noteString == "0000") noteOn = false;
 	else {
+		if (noteString == "0001") currentNote = 63;
 		if (noteString == "1110") currentNote = 66;
 		if (noteString == "1100") currentNote = 68;
 		if (noteString == "1000") currentNote = 70;
