@@ -108,7 +108,17 @@ cleanup:
 
 //========================================================================
 int main( ){
-	ofSetupOpenGL(1024,768,OF_WINDOW);			// <-------- setup the GL context
+
+	/*
+	ofGLWindowSettings windowSettings;
+	windowSettings.width = ofGetWindowWidth();
+	windowSettings.height = ofGetWindowHeight();
+
+	windowSettings.setGLVersion(3, 2);
+	windowSettings.windowMode = OF_FULLSCREEN;
+	ofCreateWindow(windowSettings);
+	*/
+	ofSetupOpenGL(1024,768,OF_FULLSCREEN);			// <-------- setup the GL context
 
 	// this kicks off the running of my app
 	// can be OF_WINDOW or OF_FULLSCREEN

@@ -1,16 +1,23 @@
 #include "Branch.h"
 
+float Branch::scaleFactor = 1;
+
 Branch::Branch(b2World *boxWorldRef, float x, float y, int nodeNum, ChucK *chuck) {
 	boxWorld = boxWorldRef;
 	myChuck = chuck;
 	anchor.setup(boxWorld, x, y, 4);
+
+	// scale Params
+	jointLength *= scaleFactor;
+	leafSize *= scaleFactor;
 
 	// initialize the nodes
 	for (int i = 0; i < nodeNum; i++) {
 		shared_ptr<ofxBox2dCircle> circle = shared_ptr<ofxBox2dCircle>(new ofxBox2dCircle);
 		circle.get()->setPhysics(0.001, 0.0, 10);
 		float xOffset = (ofRandomf() - 0.5) * 10;
-		circle.get()->setup(boxWorld, anchor.getPosition().x + xOffset, anchor.getPosition().y + (i + 1) * jointLength, 0.01);
+		circle.get()->setup(boxWorld, anchor.getPosition().x + xOffset, anchor.getPosition().y + (i + 1) * jointLength * scaleFactor
+				, 0.01*scaleFactor);
 		nodes.push_back(circle);
 	}
 
@@ -60,7 +67,7 @@ void Branch::draw(ofColor branchColor, ofImage &leafImage) {
 		ofVec2f vector = bodyB - bodyA;
 		float angleDeg = PI - ofRadToDeg(atan2(vector.x, vector.y));
 		averageXVelocity += nodes[i + 1].get()->getVelocity().x / nodes.size();
-		averageAngle += angleDeg / nodes.size();
+		averageAngle += angleDeg / (nodes.size());
 
 		ofPushStyle();
 		ofPushMatrix();

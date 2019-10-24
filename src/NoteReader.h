@@ -1,7 +1,7 @@
 #pragma once
 #include "ofxOsc.h"
 
-#define OSCPORT 12345
+#define OSCPORT 8000
 
 
 class NoteReader {

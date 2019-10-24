@@ -31,9 +31,8 @@ void ofApp::setup(){
 	boxRightHand.get()->setup(box2d.world, 0, 0, handSize);
 
 	// branches
+	Branch::scaleFactor = 2;
 	generateBranches();
-	//leafModel.loadModel(LEAFPATH, true);
-	//leafModel.setScale(5, 5, 5);
 	leafImage.load(LEAF2DPATH);
 
 	// Flow tools
