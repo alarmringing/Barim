@@ -124,13 +124,14 @@ public:
 	float pitchPushRange = 0.11;
 	float strongFluteFilterRate = 0.7;
 	Flute myFlute = Flute();
-
+	
+	
 	Flute straightFlute = {
 		0.356658 , //jetDelay 
-		0.517472 , //jetReflection 
-		0.380731 , //endReflection 
+		0.417472 , //jetReflection 
+		0.580731 , //endReflection 
 		0.32355 , //noiseGain 
-		0.707450 , //pressure 
+		0.537450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.8,  //vibratoGain 
 		0.4 //finalGain
@@ -144,19 +145,20 @@ public:
 		0.537450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.01,  //vibratoGain 
-		0.2 //finalGain
+		0.1 //finalGain
 	};
-
+	
 	Flute strongFlute = {
 		0.356658 , //jetDelay 
-		0.917472 , //jetReflection 
-		0.780731 , //endReflection 
-		0.152355 , //noiseGain 
-		0.707450 , //pressure 
+		0.417472 , //jetReflection 
+		0.880731 , //endReflection 
+		0.852355 , //noiseGain 
+		0.657450 , //pressure 
 		0.000000 , //vibratofreq 
 		0.8,  //vibratoGain 
-		0.99 //finalGain
+		0.8 //finalGain
 	};
+	
 
 	ofxPanel gui;
 	ofxLabel fps;

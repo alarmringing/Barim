@@ -162,7 +162,8 @@ float ofApp::getMaxHandHeight() {
 	}
 	if (currentMaxHandHeight > numeric_limits<float>::lowest()) maxHandHeight = currentMaxHandHeight;
 	
-	return ofLerp(0.05, 1, ofClamp(currentMaxHandHeight, 0, 0.4));
+
+	return ofNormalize(ofClamp(currentMaxHandHeight, -0.4, 0.7), -0.4, 0.7);
 }
 
 float ofApp::getMaxHandFront() {
@@ -219,7 +220,7 @@ float ofApp::getHandSpeed() {
 		leftSpeed += leftHandPreviousSpeed / ofGetLastFrameTime();
 	}
 	float maxSpeed = max(leftSpeed, rightSpeed);
-	return ofClamp(maxSpeed, 0, 7) / 7; // 1 is faster
+	return ofNormalize(ofClamp(maxSpeed, 0, 7), 0, 7); // 1 is faster
 }
 
 float ofApp::getHandDistance() {
@@ -235,12 +236,13 @@ float ofApp::getHandDistance() {
 }
 
 void ofApp::controlFlute() {
-	float handSpeedLerpAmt = getHandSpeed();
-	myFlute = lerpNewFlute(straightFlute, strongFlute, pow(handSpeedLerpAmt, 0.15));
+	float handSpeedLerpAmt = pow(getHandSpeed(), 0.8);
+	//float handSpeedLerpAmt = 0;
+	myFlute = lerpNewFlute(straightFlute, strongFlute, handSpeedLerpAmt);
 	//myChuck->setGlobalFloat("filterRate", ofLerp(1, strongFluteFilterRate, handSpeedLerpAmt));
 
 	
-	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.52);
+	float handHeightLerpAmt = pow(getMaxHandHeight(), 0.32);
 	myFlute = lerpNewFlute(breathyFlute, myFlute, handHeightLerpAmt);
 
 	//float handFrontLerpAmt = getMaxHandFront();
