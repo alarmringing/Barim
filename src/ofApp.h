@@ -43,7 +43,6 @@ class ofApp : public ofBaseApp {
 public:
 	void setup();
 	void sporkNewChuckFile(string fileName);
-	void addBranch(float xPos);
 	bool isJointTrackingStable(JointType jointType);
 	void checkHeadGong();
 	Flute lerpNewFlute(Flute firstFlute, Flute secondFlute, float amt);
@@ -87,7 +86,7 @@ public:
 	ofxKinectForWindows2::Data::Body currentBody;
 	shared_ptr<ofxBox2dCircle> boxLeftHand;
 	shared_ptr<ofxBox2dCircle> boxRightHand;
-	float handSize = 25;
+	float handSize = 30; //25 for final project presentation.
 
 	// Head gong 
 	float lastGongTime = 0;

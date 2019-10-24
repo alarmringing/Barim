@@ -82,15 +82,22 @@ void ofApp::generateBranches() {
 	}
 	// Normalize the group positions so that they are reasonably spaced across screen.
 	for (int i = 0; i < numBranchGroups; i++) {
+		groupPositions[i] = groupPositions[i] - minPos + 10;
 		groupPositions[i] *= (ofGetWidth()*0.8) / (maxPos - minPos);
-		groupPositions[i] = groupPositions[i] - minPos + 150;
 	}
 	
 
 	// Generate each branch and add it to branches.
 	for (int i = 0; i < numBranches; i++) {
 		int branchGroupMembership = ofRandom(numBranchGroups);
-		float deeviationFromGroup = ofRandom(branchGroupDeviationDegree) - branchGroupDeviationDegree / 2;
+		float deeviationFromGroup = 0;
+		if (branchGroupMembership == 0 || branchGroupMembership == numBranchGroups - 1) {
+			deeviationFromGroup = ofRandom(branchGroupDeviationDegree) 
+					- ((branchGroupMembership - numBranchGroups / 2)>0) * branchGroupDeviationDegree;
+		}
+		else {
+			deeviationFromGroup = ofRandom(branchGroupDeviationDegree) - branchGroupDeviationDegree / 2;
+		}
 		float xPos = groupPositions[branchGroupMembership] + deeviationFromGroup;
 		int nodeNum = 6 + ofRandom(27);
 		shared_ptr<Branch> branch = shared_ptr<Branch>(new Branch(box2d.getWorld(), xPos, -20 - 10 * ofRandomf(), nodeNum, myChuck));
